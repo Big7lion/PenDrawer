@@ -1,0 +1,1018 @@
+Component: ARM Compiler 5.06 update 3 (build 300) Tool: armlink [4d35c9]
+
+==============================================================================
+
+Section Cross References
+
+    stm32f10x_dma.o(i.DMA_ClearFlag) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_ClearFlag) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_ClearITPendingBit) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_Cmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_Cmd) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_DeInit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_DeInit) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_GetCurrDataCounter) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_GetCurrDataCounter) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_GetFlagStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_GetFlagStatus) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_GetITStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_GetITStatus) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_ITConfig) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_dma.o(i.DMA_Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_dma.o(i.DMA_Init) refers to stm32f10x_dma.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_AFIODeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_gpio.o(i.GPIO_DeInit) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_EXTILineConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_EXTILineConfig) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_EventOutputCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_EventOutputCmd) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_EventOutputConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_EventOutputConfig) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_Init) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_PinLockConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_PinLockConfig) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_PinRemapConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_PinRemapConfig) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_ReadInputData) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_ReadInputData) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_ReadInputDataBit) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_ReadOutputData) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_ReadOutputData) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_ResetBits) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_ResetBits) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_SetBits) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_SetBits) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_Write) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_Write) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_gpio.o(i.GPIO_WriteBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_gpio.o(i.GPIO_WriteBit) refers to stm32f10x_gpio.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_ADCCLKConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_ADCCLKConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_BackupResetCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_BackupResetCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_ClearITPendingBit) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_GetClocksFreq) refers to stm32f10x_rcc.o(.data) for .data
+    stm32f10x_rcc.o(i.RCC_GetFlagStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_GetFlagStatus) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_GetITStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_GetITStatus) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_HCLKConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_HCLKConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_HSEConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_HSEConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_HSICmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_HSICmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_ITConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_LSEConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_LSEConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_LSICmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_LSICmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_MCOConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_MCOConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_PCLK1Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_PCLK1Config) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_PCLK2Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_PCLK2Config) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_PLLCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_PLLCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_PLLConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_PLLConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_RTCCLKCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_RTCCLKCmd) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_RTCCLKConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_RTCCLKConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_SYSCLKConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_SYSCLKConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_USBCLKConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_rcc.o(i.RCC_USBCLKConfig) refers to stm32f10x_rcc.o(.conststring) for .conststring
+    stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    stm32f10x_tim.o(i.TIM_ARRPreloadConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ARRPreloadConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_BDTRConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_BDTRConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_CCPreloadControl) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_CCPreloadControl) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_CCxCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_CCxCmd) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_CCxNCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_CCxNCmd) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearFlag) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearFlag) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearITPendingBit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearITPendingBit) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearOC1Ref) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearOC1Ref) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearOC2Ref) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearOC2Ref) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearOC3Ref) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearOC3Ref) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ClearOC4Ref) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ClearOC4Ref) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_Cmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_Cmd) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_CounterModeConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_CounterModeConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_CtrlPWMOutputs) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_CtrlPWMOutputs) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_DMACmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_DMACmd) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_DMAConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_DMAConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_DeInit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd) for RCC_APB1PeriphResetCmd
+    stm32f10x_tim.o(i.TIM_DeInit) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd) for RCC_APB2PeriphResetCmd
+    stm32f10x_tim.o(i.TIM_DeInit) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ETRClockMode1Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ETRClockMode1Config) refers to stm32f10x_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    stm32f10x_tim.o(i.TIM_ETRClockMode1Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ETRClockMode2Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ETRClockMode2Config) refers to stm32f10x_tim.o(i.TIM_ETRConfig) for TIM_ETRConfig
+    stm32f10x_tim.o(i.TIM_ETRClockMode2Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ETRConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ETRConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_EncoderInterfaceConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_EncoderInterfaceConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ForcedOC1Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ForcedOC1Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ForcedOC2Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ForcedOC2Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ForcedOC3Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ForcedOC3Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ForcedOC4Config) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ForcedOC4Config) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GenerateEvent) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GenerateEvent) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetCapture1) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetCapture1) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetCapture2) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetCapture2) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetCapture3) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetCapture3) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetCapture4) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetCapture4) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetCounter) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetCounter) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetFlagStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetFlagStatus) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetITStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetITStatus) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_GetPrescaler) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_GetPrescaler) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ICInit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC4Prescaler) for TIM_SetIC4Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(i.TIM_SetIC3Prescaler) for TIM_SetIC3Prescaler
+    stm32f10x_tim.o(i.TIM_ICInit) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ITConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig) refers to stm32f10x_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_InternalClockConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_InternalClockConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC1FastConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC1FastConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC1Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC1Init) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC1NPolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC1NPolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC1PolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC1PolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC1PreloadConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC1PreloadConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC2FastConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC2FastConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC2Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC2Init) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC2NPolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC2NPolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC2PolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC2PolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC2PreloadConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC2PreloadConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC3FastConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC3FastConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC3Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC3Init) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC3NPolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC3NPolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC3PolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC3PolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC3PreloadConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC3PreloadConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC4FastConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC4FastConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC4Init) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC4Init) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC4PolarityConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC4PolarityConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_OC4PreloadConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_OC4PreloadConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TIM_SetIC2Prescaler) for TIM_SetIC2Prescaler
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(i.TIM_SetIC1Prescaler) for TIM_SetIC1Prescaler
+    stm32f10x_tim.o(i.TIM_PWMIConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_PrescalerConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_PrescalerConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectCCDMA) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectCCDMA) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectCOM) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectCOM) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectHallSensor) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectHallSensor) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectInputTrigger) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectInputTrigger) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectMasterSlaveMode) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectMasterSlaveMode) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectOCxM) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectOCxM) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectOnePulseMode) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectOnePulseMode) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectOutputTrigger) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectOutputTrigger) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SelectSlaveMode) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SelectSlaveMode) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetAutoreload) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetAutoreload) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetClockDivision) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetClockDivision) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetCompare1) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetCompare1) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetCompare2) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetCompare2) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetCompare3) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetCompare3) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetCompare4) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetCompare4) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetCounter) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetCounter) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetIC1Prescaler) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetIC1Prescaler) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetIC2Prescaler) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetIC2Prescaler) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetIC3Prescaler) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetIC3Prescaler) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_SetIC4Prescaler) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_SetIC4Prescaler) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI1_Config) for TI1_Config
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TIM_SelectInputTrigger) for TIM_SelectInputTrigger
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(i.TI2_Config) for TI2_Config
+    stm32f10x_tim.o(i.TIM_TIxExternalClockConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_TimeBaseInit) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_TimeBaseInit) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_UpdateDisableConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_UpdateDisableConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    stm32f10x_tim.o(i.TIM_UpdateRequestConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_tim.o(i.TIM_UpdateRequestConfig) refers to stm32f10x_tim.o(.conststring) for .conststring
+    misc.o(i.NVIC_Init) refers to main.o(i.assert_failed) for assert_failed
+    misc.o(i.NVIC_PriorityGroupConfig) refers to main.o(i.assert_failed) for assert_failed
+    misc.o(i.NVIC_SetVectorTable) refers to main.o(i.assert_failed) for assert_failed
+    misc.o(i.NVIC_SystemLPConfig) refers to main.o(i.assert_failed) for assert_failed
+    misc.o(i.SysTick_CLKSourceConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ClearFlag) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ClearFlag) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_EnableWriteProtection) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_EnableWriteProtection) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_EnableWriteProtection) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_EraseAllPages) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_EraseOptionBytes) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ErasePage) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ErasePage) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ErasePage) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_GetFlagStatus) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_GetFlagStatus) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_HalfCycleAccessCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_HalfCycleAccessCmd) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_ITConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ITConfig) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_ProgramHalfWord) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ProgramHalfWord) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramHalfWord) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_ProgramOptionByteData) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ProgramOptionByteData) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramOptionByteData) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_ProgramWord) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ProgramWord) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ProgramWord) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_ReadOutProtection) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_ReadOutProtection) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_ReadOutProtection) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_SetLatency) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_SetLatency) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_UserOptionByteConfig) refers to main.o(i.assert_failed) for assert_failed
+    stm32f10x_flash.o(i.FLASH_UserOptionByteConfig) refers to stm32f10x_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f10x_flash.o(i.FLASH_UserOptionByteConfig) refers to stm32f10x_flash.o(.conststring) for .conststring
+    stm32f10x_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f10x_flash.o(i.FLASH_GetStatus) for FLASH_GetStatus
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f10x_md.o(RESET) refers to stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) for DMA1_Channel2_IRQHandler
+    startup_stm32f10x_md.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) refers to stm32f10x_it.o(.data) for .data
+    stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) refers to system_stm32f10x.o(.constdata) for SystemFrequency
+    stm32f10x_it.o(i.DMA1_Channel2_IRQHandler) refers to steppermotor.o(.data) for SRC_Buffer_INC
+    stm32f10x_it.o(i.SysTick_Handler) refers to steppermotor.o(.data) for SRC_Buffer_DEC
+    stm32f10x_it.o(i.SysTick_Handler) refers to stm32f10x_it.o(.data) for .data
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_DeInit) for RCC_DeInit
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_HSEConfig) for RCC_HSEConfig
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp) for RCC_WaitForHSEStartUp
+    main.o(i.RCC_Configuration) refers to stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd) for FLASH_PrefetchBufferCmd
+    main.o(i.RCC_Configuration) refers to stm32f10x_flash.o(i.FLASH_SetLatency) for FLASH_SetLatency
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_HCLKConfig) for RCC_HCLKConfig
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PCLK2Config) for RCC_PCLK2Config
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PCLK1Config) for RCC_PCLK1Config
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PLLConfig) for RCC_PLLConfig
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_PLLCmd) for RCC_PLLCmd
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_GetFlagStatus) for RCC_GetFlagStatus
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_SYSCLKConfig) for RCC_SYSCLKConfig
+    main.o(i.RCC_Configuration) refers to stm32f10x_rcc.o(i.RCC_GetSYSCLKSource) for RCC_GetSYSCLKSource
+    main.o(i.RCC_Configuration) refers to main.o(.data) for .data
+    main.o(i.main) refers to main.o(i.RCC_Configuration) for RCC_Configuration
+    main.o(i.main) refers to main.o(i.NVIC_Configuration) for NVIC_Configuration
+    main.o(i.main) refers to steppermotor.o(i.Stepper_Cmd) for Stepper_Cmd
+    main.o(i.main) refers to steppermotor.o(i.Stepper_PinControlConfig) for Stepper_PinControlConfig
+    main.o(i.main) refers to steppermotor.o(i.Stepper_ResetDisable) for Stepper_ResetDisable
+    main.o(i.main) refers to steppermotor.o(i.Stepper_SetRotationDirection) for Stepper_SetRotationDirection
+    main.o(i.main) refers to steppermotor.o(i.Stepper_SelectMode) for Stepper_SelectMode
+    main.o(i.main) refers to steppermotor.o(i.Stepper_SetControlMode) for Stepper_SetControlMode
+    main.o(i.main) refers to steppermotor.o(i.Stepper_Start) for Stepper_Start
+    main.o(i.main) refers to steppermotor.o(i.Stepper_Init) for Stepper_Init
+    steppermotor.o(i.Stepper_Cmd) refers to stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd) for RCC_APB1PeriphClockCmd
+    steppermotor.o(i.Stepper_Cmd) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
+    steppermotor.o(i.Stepper_Cmd) refers to stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd) for RCC_AHBPeriphClockCmd
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_tim.o(i.TIM_TimeBaseInit) for TIM_TimeBaseInit
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_tim.o(i.TIM_OC1Init) for TIM_OC1Init
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_tim.o(i.TIM_ARRPreloadConfig) for TIM_ARRPreloadConfig
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_tim.o(i.TIM_Cmd) for TIM_Cmd
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_dma.o(i.DMA_DeInit) for DMA_DeInit
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_dma.o(i.DMA_Init) for DMA_Init
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_dma.o(i.DMA_ITConfig) for DMA_ITConfig
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_dma.o(i.DMA_Cmd) for DMA_Cmd
+    steppermotor.o(i.Stepper_Init) refers to stm32f10x_tim.o(i.TIM_DMACmd) for TIM_DMACmd
+    steppermotor.o(i.Stepper_Init) refers to steppermotor.o(.bss) for .bss
+    steppermotor.o(i.Stepper_Init) refers to steppermotor.o(.data) for .data
+    steppermotor.o(i.Stepper_PinControlConfig) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
+    steppermotor.o(i.Stepper_PinControlConfig) refers to steppermotor.o(.data) for .data
+    steppermotor.o(i.Stepper_ResetDisable) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    steppermotor.o(i.Stepper_SelectMode) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    steppermotor.o(i.Stepper_SelectMode) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    steppermotor.o(i.Stepper_SetControlMode) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    steppermotor.o(i.Stepper_SetControlMode) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    steppermotor.o(i.Stepper_SetRotationDirection) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    steppermotor.o(i.Stepper_SetRotationDirection) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    steppermotor.o(i.Stepper_Start) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
+    steppermotor.o(i.Stepper_Start) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
+    system_stm32f10x.o(i.SystemInit) refers to system_stm32f10x.o(i.SetSysClockTo72) for SetSysClockTo72
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing stm32f10x_dma.o(i.DMA_ClearFlag), (60 bytes).
+    Removing stm32f10x_dma.o(i.DMA_ClearITPendingBit), (60 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetCurrDataCounter), (124 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetFlagStatus), (384 bytes).
+    Removing stm32f10x_dma.o(i.DMA_GetITStatus), (384 bytes).
+    Removing stm32f10x_dma.o(i.DMA_StructInit), (26 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_AFIODeInit), (22 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_DeInit), (240 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EXTILineConfig), (156 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputCmd), (36 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_EventOutputConfig), (136 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinLockConfig), (120 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_PinRemapConfig), (300 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputData), (96 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadInputDataBit), (196 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputData), (96 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_ReadOutputDataBit), (196 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_StructInit), (16 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_Write), (96 bytes).
+    Removing stm32f10x_gpio.o(i.GPIO_WriteBit), (208 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ADCCLKConfig), (56 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB1PeriphResetCmd), (68 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_APB2PeriphResetCmd), (68 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_AdjustHSICalibrationValue), (44 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_BackupResetCmd), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearFlag), (16 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClearITPendingBit), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ClockSecuritySystemCmd), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetClocksFreq), (144 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_GetITStatus), (64 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_HSICmd), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_ITConfig), (64 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSEConfig), (68 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_LSICmd), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_MCOConfig), (48 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKCmd), (36 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_RTCCLKConfig), (52 bytes).
+    Removing stm32f10x_rcc.o(i.RCC_USBCLKConfig), (36 bytes).
+    Removing stm32f10x_rcc.o(.data), (20 bytes).
+    Removing stm32f10x_tim.o(i.TI1_Config), (46 bytes).
+    Removing stm32f10x_tim.o(i.TI2_Config), (54 bytes).
+    Removing stm32f10x_tim.o(i.TIM_BDTRConfig), (204 bytes).
+    Removing stm32f10x_tim.o(i.TIM_BDTRStructInit), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCPreloadControl), (76 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCxCmd), (140 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CCxNCmd), (100 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearFlag), (172 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearITPendingBit), (168 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC1Ref), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC2Ref), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC3Ref), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ClearOC4Ref), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CounterModeConfig), (120 bytes).
+    Removing stm32f10x_tim.o(i.TIM_CtrlPWMOutputs), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_DMAConfig), (284 bytes).
+    Removing stm32f10x_tim.o(i.TIM_DeInit), (276 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRClockMode1Config), (168 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRClockMode2Config), (168 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ETRConfig), (168 bytes).
+    Removing stm32f10x_tim.o(i.TIM_EncoderInterfaceConfig), (188 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC1Config), (108 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC2Config), (116 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC3Config), (108 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ForcedOC4Config), (116 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GenerateEvent), (196 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture1), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture2), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture3), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCapture4), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetCounter), (100 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetFlagStatus), (352 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetITStatus), (240 bytes).
+    Removing stm32f10x_tim.o(i.TIM_GetPrescaler), (100 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ICInit), (372 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ICStructInit), (16 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ITConfig), (224 bytes).
+    Removing stm32f10x_tim.o(i.TIM_ITRxExternalClockConfig), (120 bytes).
+    Removing stm32f10x_tim.o(i.TIM_InternalClockConfig), (84 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1FastConfig), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1NPolarityConfig), (68 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1PolarityConfig), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC1PreloadConfig), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2FastConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2Init), (348 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2NPolarityConfig), (76 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2PolarityConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC2PreloadConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3FastConfig), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3Init), (344 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3NPolarityConfig), (76 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3PolarityConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC3PreloadConfig), (104 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4FastConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4Init), (264 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4PolarityConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OC4PreloadConfig), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_OCStructInit), (20 bytes).
+    Removing stm32f10x_tim.o(i.TIM_PWMIConfig), (180 bytes).
+    Removing stm32f10x_tim.o(i.TIM_PrescalerConfig), (120 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectCCDMA), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectCOM), (76 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectHallSensor), (112 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectInputTrigger), (128 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectMasterSlaveMode), (108 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOCxM), (212 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOnePulseMode), (132 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectOutputTrigger), (436 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SelectSlaveMode), (120 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetAutoreload), (100 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetClockDivision), (116 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare1), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare2), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare3), (80 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCompare4), (84 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetCounter), (100 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC1Prescaler), (116 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC2Prescaler), (124 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC3Prescaler), (116 bytes).
+    Removing stm32f10x_tim.o(i.TIM_SetIC4Prescaler), (124 bytes).
+    Removing stm32f10x_tim.o(i.TIM_TIxExternalClockConfig), (180 bytes).
+    Removing stm32f10x_tim.o(i.TIM_TimeBaseStructInit), (18 bytes).
+    Removing stm32f10x_tim.o(i.TIM_UpdateDisableConfig), (132 bytes).
+    Removing stm32f10x_tim.o(i.TIM_UpdateRequestConfig), (132 bytes).
+    Removing misc.o(i.NVIC_Init), (208 bytes).
+    Removing misc.o(i.NVIC_PriorityGroupConfig), (120 bytes).
+    Removing misc.o(i.NVIC_SetVectorTable), (124 bytes).
+    Removing misc.o(i.NVIC_SystemLPConfig), (120 bytes).
+    Removing misc.o(i.SysTick_CLKSourceConfig), (100 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ClearFlag), (36 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EnableWriteProtection), (188 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EraseAllPages), (60 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_EraseOptionBytes), (116 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ErasePage), (92 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetFlagStatus), (60 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetPrefetchBufferStatus), (20 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetReadOutProtectionStatus), (20 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetStatus), (40 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetUserOptionByte), (12 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_GetWriteProtectionOptionByte), (12 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_HalfCycleAccessCmd), (44 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ITConfig), (64 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_Lock), (16 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramHalfWord), (84 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramOptionByteData), (100 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ProgramWord), (100 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_ReadOutProtection), (156 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_Unlock), (24 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_UserOptionByteConfig), (144 bytes).
+    Removing stm32f10x_flash.o(i.FLASH_WaitForLastOperation), (46 bytes).
+    Removing startup_stm32f10x_md.o(HEAP), (0 bytes).
+    Removing core_cm3.o(.emb_text), (32 bytes).
+    Removing system_stm32f10x.o(i.SetSysClockTo72), (168 bytes).
+    Removing system_stm32f10x.o(i.SystemInit), (64 bytes).
+    Removing system_stm32f10x.o(.constdata), (4 bytes).
+    Removing system_stm32f10x.o(.constdata), (4 bytes).
+    Removing system_stm32f10x.o(.constdata), (4 bytes).
+    Removing system_stm32f10x.o(.constdata), (4 bytes).
+
+157 unused section(s) (total 17554 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ..\..\..\Libraries\CMSIS\Core\CM3\core_cm3.c 0x00000000   Number         0  core_cm3.o ABSOLUTE
+    ..\..\..\Libraries\CMSIS\Core\CM3\startup\arm\startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    ..\..\..\Libraries\CMSIS\Core\CM3\system_stm32f10x.c 0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c 0x00000000   Number         0  misc.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c 0x00000000   Number         0  stm32f10x_dma.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c 0x00000000   Number         0  stm32f10x_flash.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c 0x00000000   Number         0  stm32f10x_gpio.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c 0x00000000   Number         0  stm32f10x_rcc.o ABSOLUTE
+    ..\..\..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c 0x00000000   Number         0  stm32f10x_tim.o ABSOLUTE
+    ..\\..\\..\\Libraries\\CMSIS\\Core\\CM3\\core_cm3.c 0x00000000   Number         0  core_cm3.o ABSOLUTE
+    ..\src\StepperMotor.c                    0x00000000   Number         0  steppermotor.o ABSOLUTE
+    ..\src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
+    ..\src\stm32f10x_it.c                    0x00000000   Number         0  stm32f10x_it.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    .ARM.Collect$$$$00000000                 0x080000ec   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x080000ec   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x080000f0   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x080000f4   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x080000f4   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x080000f4   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x080000fc   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x080000fc   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x080000fc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x080000fc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000100   Section       28  startup_stm32f10x_md.o(.text)
+    .text                                    0x0800011c   Section       36  init.o(.text)
+    i.BusFault_Handler                       0x08000140   Section        0  stm32f10x_it.o(i.BusFault_Handler)
+    i.DMA1_Channel2_IRQHandler               0x08000144   Section        0  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    i.DMA_Cmd                                0x080001d0   Section        0  stm32f10x_dma.o(i.DMA_Cmd)
+    i.DMA_DeInit                             0x0800026c   Section        0  stm32f10x_dma.o(i.DMA_DeInit)
+    i.DMA_ITConfig                           0x080003ac   Section        0  stm32f10x_dma.o(i.DMA_ITConfig)
+    i.DMA_Init                               0x08000458   Section        0  stm32f10x_dma.o(i.DMA_Init)
+    i.DebugMon_Handler                       0x080005bc   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.FLASH_PrefetchBufferCmd                0x080005c0   Section        0  stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd)
+    i.FLASH_SetLatency                       0x080005ec   Section        0  stm32f10x_flash.o(i.FLASH_SetLatency)
+    i.GPIO_Init                              0x08000618   Section        0  stm32f10x_gpio.o(i.GPIO_Init)
+    i.GPIO_ResetBits                         0x08000760   Section        0  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    i.GPIO_SetBits                           0x080007cc   Section        0  stm32f10x_gpio.o(i.GPIO_SetBits)
+    i.HardFault_Handler                      0x08000838   Section        0  stm32f10x_it.o(i.HardFault_Handler)
+    i.MemManage_Handler                      0x0800083a   Section        0  stm32f10x_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x0800083c   Section        0  stm32f10x_it.o(i.NMI_Handler)
+    i.NVIC_Configuration                     0x08000840   Section        0  main.o(i.NVIC_Configuration)
+    i.PendSV_Handler                         0x08000874   Section        0  stm32f10x_it.o(i.PendSV_Handler)
+    i.RCC_AHBPeriphClockCmd                  0x08000878   Section        0  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    i.RCC_APB1PeriphClockCmd                 0x080008bc   Section        0  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    i.RCC_APB2PeriphClockCmd                 0x08000900   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    i.RCC_Configuration                      0x08000944   Section        0  main.o(i.RCC_Configuration)
+    i.RCC_DeInit                             0x080009b0   Section        0  stm32f10x_rcc.o(i.RCC_DeInit)
+    i.RCC_GetFlagStatus                      0x080009ec   Section        0  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    i.RCC_GetSYSCLKSource                    0x08000a5c   Section        0  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    i.RCC_HCLKConfig                         0x08000a6c   Section        0  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    i.RCC_HSEConfig                          0x08000ab4   Section        0  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    i.RCC_PCLK1Config                        0x08000b08   Section        0  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    i.RCC_PCLK2Config                        0x08000b48   Section        0  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    i.RCC_PLLCmd                             0x08000b88   Section        0  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    i.RCC_PLLConfig                          0x08000bac   Section        0  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    i.RCC_SYSCLKConfig                       0x08000c44   Section        0  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    i.RCC_WaitForHSEStartUp                  0x08000c74   Section        0  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    i.SVC_Handler                            0x08000c9e   Section        0  stm32f10x_it.o(i.SVC_Handler)
+    i.Stepper_Cmd                            0x08000ca0   Section        0  steppermotor.o(i.Stepper_Cmd)
+    i.Stepper_Init                           0x08000ce8   Section        0  steppermotor.o(i.Stepper_Init)
+    i.Stepper_PinControlConfig               0x08000db8   Section        0  steppermotor.o(i.Stepper_PinControlConfig)
+    i.Stepper_ResetDisable                   0x08000dd8   Section        0  steppermotor.o(i.Stepper_ResetDisable)
+    i.Stepper_SelectMode                     0x08000de4   Section        0  steppermotor.o(i.Stepper_SelectMode)
+    i.Stepper_SetControlMode                 0x08000dfc   Section        0  steppermotor.o(i.Stepper_SetControlMode)
+    i.Stepper_SetRotationDirection           0x08000e14   Section        0  steppermotor.o(i.Stepper_SetRotationDirection)
+    i.Stepper_Start                          0x08000e2c   Section        0  steppermotor.o(i.Stepper_Start)
+    i.SysTick_Handler                        0x08000e44   Section        0  stm32f10x_it.o(i.SysTick_Handler)
+    i.TIM_ARRPreloadConfig                   0x08000e84   Section        0  stm32f10x_tim.o(i.TIM_ARRPreloadConfig)
+    i.TIM_Cmd                                0x08000f08   Section        0  stm32f10x_tim.o(i.TIM_Cmd)
+    i.TIM_DMACmd                             0x08000f8c   Section        0  stm32f10x_tim.o(i.TIM_DMACmd)
+    i.TIM_OC1Init                            0x08001074   Section        0  stm32f10x_tim.o(i.TIM_OC1Init)
+    i.TIM_TimeBaseInit                       0x080011b0   Section        0  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    i.UsageFault_Handler                     0x08001260   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
+    i.__scatterload_copy                     0x08001262   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001270   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001272   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.assert_failed                          0x08001280   Section        0  main.o(i.assert_failed)
+    i.main                                   0x08001282   Section        0  main.o(i.main)
+    .constdata                               0x080012b8   Section        4  system_stm32f10x.o(.constdata)
+    .conststring                             0x080012bc   Section       66  stm32f10x_dma.o(.conststring)
+    .conststring                             0x08001300   Section       67  stm32f10x_gpio.o(.conststring)
+    .conststring                             0x08001344   Section       66  stm32f10x_rcc.o(.conststring)
+    .conststring                             0x08001388   Section       66  stm32f10x_tim.o(.conststring)
+    .conststring                             0x080013cc   Section       68  stm32f10x_flash.o(.conststring)
+    .data                                    0x20000000   Section        1  stm32f10x_it.o(.data)
+    .data                                    0x20000001   Section        1  main.o(.data)
+    .data                                    0x20000002   Section       40  steppermotor.o(.data)
+    .data                                    0x2000002a   Section       44  steppermotor.o(.data)
+    .bss                                     0x20000058   Section       72  steppermotor.o(.bss)
+    STACK                                    0x200000a0   Section      512  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    __main                                   0x080000ed   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x080000ed   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x080000f1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x080000f5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x080000f5   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x080000f5   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x080000f5   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x080000fd   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x080000fd   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x08000101   Thumb Code     4  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_UP_IRQHandler                       0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM2_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM3_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM4_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART1_IRQHandler                        0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x08000117   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __scatterload                            0x0800011d   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x0800011d   Thumb Code     0  init.o(.text)
+    BusFault_Handler                         0x08000141   Thumb Code     2  stm32f10x_it.o(i.BusFault_Handler)
+    DMA1_Channel2_IRQHandler                 0x08000145   Thumb Code   118  stm32f10x_it.o(i.DMA1_Channel2_IRQHandler)
+    DMA_Cmd                                  0x080001d1   Thumb Code   142  stm32f10x_dma.o(i.DMA_Cmd)
+    DMA_DeInit                               0x0800026d   Thumb Code   302  stm32f10x_dma.o(i.DMA_DeInit)
+    DMA_ITConfig                             0x080003ad   Thumb Code   158  stm32f10x_dma.o(i.DMA_ITConfig)
+    DMA_Init                                 0x08000459   Thumb Code   342  stm32f10x_dma.o(i.DMA_Init)
+    DebugMon_Handler                         0x080005bd   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    FLASH_PrefetchBufferCmd                  0x080005c1   Thumb Code    36  stm32f10x_flash.o(i.FLASH_PrefetchBufferCmd)
+    FLASH_SetLatency                         0x080005ed   Thumb Code    36  stm32f10x_flash.o(i.FLASH_SetLatency)
+    GPIO_Init                                0x08000619   Thumb Code   296  stm32f10x_gpio.o(i.GPIO_Init)
+    GPIO_ResetBits                           0x08000761   Thumb Code    74  stm32f10x_gpio.o(i.GPIO_ResetBits)
+    GPIO_SetBits                             0x080007cd   Thumb Code    74  stm32f10x_gpio.o(i.GPIO_SetBits)
+    HardFault_Handler                        0x08000839   Thumb Code     2  stm32f10x_it.o(i.HardFault_Handler)
+    MemManage_Handler                        0x0800083b   Thumb Code     2  stm32f10x_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x0800083d   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
+    NVIC_Configuration                       0x08000841   Thumb Code    40  main.o(i.NVIC_Configuration)
+    PendSV_Handler                           0x08000875   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
+    RCC_AHBPeriphClockCmd                    0x08000879   Thumb Code    60  stm32f10x_rcc.o(i.RCC_AHBPeriphClockCmd)
+    RCC_APB1PeriphClockCmd                   0x080008bd   Thumb Code    56  stm32f10x_rcc.o(i.RCC_APB1PeriphClockCmd)
+    RCC_APB2PeriphClockCmd                   0x08000901   Thumb Code    60  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
+    RCC_Configuration                        0x08000945   Thumb Code   102  main.o(i.RCC_Configuration)
+    RCC_DeInit                               0x080009b1   Thumb Code    48  stm32f10x_rcc.o(i.RCC_DeInit)
+    RCC_GetFlagStatus                        0x080009ed   Thumb Code   102  stm32f10x_rcc.o(i.RCC_GetFlagStatus)
+    RCC_GetSYSCLKSource                      0x08000a5d   Thumb Code    10  stm32f10x_rcc.o(i.RCC_GetSYSCLKSource)
+    RCC_HCLKConfig                           0x08000a6d   Thumb Code    62  stm32f10x_rcc.o(i.RCC_HCLKConfig)
+    RCC_HSEConfig                            0x08000ab5   Thumb Code    74  stm32f10x_rcc.o(i.RCC_HSEConfig)
+    RCC_PCLK1Config                          0x08000b09   Thumb Code    54  stm32f10x_rcc.o(i.RCC_PCLK1Config)
+    RCC_PCLK2Config                          0x08000b49   Thumb Code    56  stm32f10x_rcc.o(i.RCC_PCLK2Config)
+    RCC_PLLCmd                               0x08000b89   Thumb Code    26  stm32f10x_rcc.o(i.RCC_PLLCmd)
+    RCC_PLLConfig                            0x08000bad   Thumb Code   142  stm32f10x_rcc.o(i.RCC_PLLConfig)
+    RCC_SYSCLKConfig                         0x08000c45   Thumb Code    38  stm32f10x_rcc.o(i.RCC_SYSCLKConfig)
+    RCC_WaitForHSEStartUp                    0x08000c75   Thumb Code    42  stm32f10x_rcc.o(i.RCC_WaitForHSEStartUp)
+    SVC_Handler                              0x08000c9f   Thumb Code     2  stm32f10x_it.o(i.SVC_Handler)
+    Stepper_Cmd                              0x08000ca1   Thumb Code    70  steppermotor.o(i.Stepper_Cmd)
+    Stepper_Init                             0x08000ce9   Thumb Code   188  steppermotor.o(i.Stepper_Init)
+    Stepper_PinControlConfig                 0x08000db9   Thumb Code    24  steppermotor.o(i.Stepper_PinControlConfig)
+    Stepper_ResetDisable                     0x08000dd9   Thumb Code     8  steppermotor.o(i.Stepper_ResetDisable)
+    Stepper_SelectMode                       0x08000de5   Thumb Code    20  steppermotor.o(i.Stepper_SelectMode)
+    Stepper_SetControlMode                   0x08000dfd   Thumb Code    20  steppermotor.o(i.Stepper_SetControlMode)
+    Stepper_SetRotationDirection             0x08000e15   Thumb Code    20  steppermotor.o(i.Stepper_SetRotationDirection)
+    Stepper_Start                            0x08000e2d   Thumb Code    20  steppermotor.o(i.Stepper_Start)
+    SysTick_Handler                          0x08000e45   Thumb Code    52  stm32f10x_it.o(i.SysTick_Handler)
+    TIM_ARRPreloadConfig                     0x08000e85   Thumb Code   100  stm32f10x_tim.o(i.TIM_ARRPreloadConfig)
+    TIM_Cmd                                  0x08000f09   Thumb Code   100  stm32f10x_tim.o(i.TIM_Cmd)
+    TIM_DMACmd                               0x08000f8d   Thumb Code   198  stm32f10x_tim.o(i.TIM_DMACmd)
+    TIM_OC1Init                              0x08001075   Thumb Code   292  stm32f10x_tim.o(i.TIM_OC1Init)
+    TIM_TimeBaseInit                         0x080011b1   Thumb Code   152  stm32f10x_tim.o(i.TIM_TimeBaseInit)
+    UsageFault_Handler                       0x08001261   Thumb Code     2  stm32f10x_it.o(i.UsageFault_Handler)
+    __scatterload_copy                       0x08001263   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001271   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001273   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    assert_failed                            0x08001281   Thumb Code     2  main.o(i.assert_failed)
+    main                                     0x08001283   Thumb Code    52  main.o(i.main)
+    SystemFrequency                          0x080012b8   Data           4  system_stm32f10x.o(.constdata)
+    Region$$Table$$Base                      0x08001410   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001430   Number         0  anon$$obj.o(Region$$Table)
+    acceleration                             0x20000000   Data           1  stm32f10x_it.o(.data)
+    HSEStartUpStatus                         0x20000001   Data           1  main.o(.data)
+    SRC_Buffer_DEC                           0x20000002   Data          40  steppermotor.o(.data)
+    GPIO_InitStructure                       0x2000002a   Data           4  steppermotor.o(.data)
+    SRC_Buffer_INC                           0x2000002e   Data          40  steppermotor.o(.data)
+    TIM_TimeBaseStructure                    0x20000058   Data          10  steppermotor.o(.bss)
+    TIM_OCInitStructure                      0x20000062   Data          16  steppermotor.o(.bss)
+    DMA_InitStructure                        0x20000074   Data          44  steppermotor.o(.bss)
+    __initial_sp                             0x200002a0   Data           0  startup_stm32f10x_md.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001488, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00001430, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x000000ec   Data   RO         1136    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x00000000   Code   RO         1366  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x00000004   Code   RO         1369    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x00000004   Code   RO         1372    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x00000000   Code   RO         1374    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x00000000   Code   RO         1376    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x00000008   Code   RO         1377    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x00000000   Code   RO         1379    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x00000000   Code   RO         1381    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x00000004   Code   RO         1370    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x0000001c   Code   RO         1137    .text               startup_stm32f10x_md.o
+    0x0800011c   0x00000024   Code   RO         1383    .text               mc_w.l(init.o)
+    0x08000140   0x00000002   Code   RO         1142    i.BusFault_Handler  stm32f10x_it.o
+    0x08000142   0x00000002   PAD
+    0x08000144   0x0000008c   Code   RO         1143    i.DMA1_Channel2_IRQHandler  stm32f10x_it.o
+    0x080001d0   0x0000009c   Code   RO            3    i.DMA_Cmd           stm32f10x_dma.o
+    0x0800026c   0x00000140   Code   RO            4    i.DMA_DeInit        stm32f10x_dma.o
+    0x080003ac   0x000000ac   Code   RO            8    i.DMA_ITConfig      stm32f10x_dma.o
+    0x08000458   0x00000164   Code   RO            9    i.DMA_Init          stm32f10x_dma.o
+    0x080005bc   0x00000002   Code   RO         1144    i.DebugMon_Handler  stm32f10x_it.o
+    0x080005be   0x00000002   PAD
+    0x080005c0   0x0000002c   Code   RO         1003    i.FLASH_PrefetchBufferCmd  stm32f10x_flash.o
+    0x080005ec   0x0000002c   Code   RO         1008    i.FLASH_SetLatency  stm32f10x_flash.o
+    0x08000618   0x00000148   Code   RO          109    i.GPIO_Init         stm32f10x_gpio.o
+    0x08000760   0x0000006c   Code   RO          116    i.GPIO_ResetBits    stm32f10x_gpio.o
+    0x080007cc   0x0000006c   Code   RO          117    i.GPIO_SetBits      stm32f10x_gpio.o
+    0x08000838   0x00000002   Code   RO         1145    i.HardFault_Handler  stm32f10x_it.o
+    0x0800083a   0x00000002   Code   RO         1146    i.MemManage_Handler  stm32f10x_it.o
+    0x0800083c   0x00000002   Code   RO         1147    i.NMI_Handler       stm32f10x_it.o
+    0x0800083e   0x00000002   PAD
+    0x08000840   0x00000034   Code   RO         1221    i.NVIC_Configuration  main.o
+    0x08000874   0x00000002   Code   RO         1148    i.PendSV_Handler    stm32f10x_it.o
+    0x08000876   0x00000002   PAD
+    0x08000878   0x00000044   Code   RO          214    i.RCC_AHBPeriphClockCmd  stm32f10x_rcc.o
+    0x080008bc   0x00000044   Code   RO          215    i.RCC_APB1PeriphClockCmd  stm32f10x_rcc.o
+    0x08000900   0x00000044   Code   RO          217    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
+    0x08000944   0x0000006c   Code   RO         1222    i.RCC_Configuration  main.o
+    0x080009b0   0x0000003c   Code   RO          224    i.RCC_DeInit        stm32f10x_rcc.o
+    0x080009ec   0x00000070   Code   RO          226    i.RCC_GetFlagStatus  stm32f10x_rcc.o
+    0x08000a5c   0x00000010   Code   RO          228    i.RCC_GetSYSCLKSource  stm32f10x_rcc.o
+    0x08000a6c   0x00000048   Code   RO          229    i.RCC_HCLKConfig    stm32f10x_rcc.o
+    0x08000ab4   0x00000054   Code   RO          230    i.RCC_HSEConfig     stm32f10x_rcc.o
+    0x08000b08   0x00000040   Code   RO          236    i.RCC_PCLK1Config   stm32f10x_rcc.o
+    0x08000b48   0x00000040   Code   RO          237    i.RCC_PCLK2Config   stm32f10x_rcc.o
+    0x08000b88   0x00000024   Code   RO          238    i.RCC_PLLCmd        stm32f10x_rcc.o
+    0x08000bac   0x00000098   Code   RO          239    i.RCC_PLLConfig     stm32f10x_rcc.o
+    0x08000c44   0x00000030   Code   RO          242    i.RCC_SYSCLKConfig  stm32f10x_rcc.o
+    0x08000c74   0x0000002a   Code   RO          244    i.RCC_WaitForHSEStartUp  stm32f10x_rcc.o
+    0x08000c9e   0x00000002   Code   RO         1149    i.SVC_Handler       stm32f10x_it.o
+    0x08000ca0   0x00000046   Code   RO         1261    i.Stepper_Cmd       steppermotor.o
+    0x08000ce6   0x00000002   PAD
+    0x08000ce8   0x000000d0   Code   RO         1262    i.Stepper_Init      steppermotor.o
+    0x08000db8   0x00000020   Code   RO         1263    i.Stepper_PinControlConfig  steppermotor.o
+    0x08000dd8   0x0000000c   Code   RO         1264    i.Stepper_ResetDisable  steppermotor.o
+    0x08000de4   0x00000018   Code   RO         1265    i.Stepper_SelectMode  steppermotor.o
+    0x08000dfc   0x00000018   Code   RO         1266    i.Stepper_SetControlMode  steppermotor.o
+    0x08000e14   0x00000018   Code   RO         1267    i.Stepper_SetRotationDirection  steppermotor.o
+    0x08000e2c   0x00000018   Code   RO         1268    i.Stepper_Start     steppermotor.o
+    0x08000e44   0x00000040   Code   RO         1150    i.SysTick_Handler   stm32f10x_it.o
+    0x08000e84   0x00000084   Code   RO          416    i.TIM_ARRPreloadConfig  stm32f10x_tim.o
+    0x08000f08   0x00000084   Code   RO          428    i.TIM_Cmd           stm32f10x_tim.o
+    0x08000f8c   0x000000e8   Code   RO          431    i.TIM_DMACmd        stm32f10x_tim.o
+    0x08001074   0x0000013c   Code   RO          457    i.TIM_OC1Init       stm32f10x_tim.o
+    0x080011b0   0x000000b0   Code   RO          499    i.TIM_TimeBaseInit  stm32f10x_tim.o
+    0x08001260   0x00000002   Code   RO         1151    i.UsageFault_Handler  stm32f10x_it.o
+    0x08001262   0x0000000e   Code   RO         1387    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001270   0x00000002   Code   RO         1388    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001272   0x0000000e   Code   RO         1389    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001280   0x00000002   Code   RO         1223    i.assert_failed     main.o
+    0x08001282   0x00000034   Code   RO         1224    i.main              main.o
+    0x080012b6   0x00000002   PAD
+    0x080012b8   0x00000004   Data   RO         1332    .constdata          system_stm32f10x.o
+    0x080012bc   0x00000042   Data   RO           11    .conststring        stm32f10x_dma.o
+    0x080012fe   0x00000002   PAD
+    0x08001300   0x00000043   Data   RO          121    .conststring        stm32f10x_gpio.o
+    0x08001343   0x00000001   PAD
+    0x08001344   0x00000042   Data   RO          245    .conststring        stm32f10x_rcc.o
+    0x08001386   0x00000002   PAD
+    0x08001388   0x00000042   Data   RO          503    .conststring        stm32f10x_tim.o
+    0x080013ca   0x00000002   PAD
+    0x080013cc   0x00000044   Data   RO         1012    .conststring        stm32f10x_flash.o
+    0x08001410   0x00000020   Data   RO         1385    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000002a0, Max: 0x00005000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000001   Data   RW         1152    .data               stm32f10x_it.o
+    0x20000001   0x00000001   Data   RW         1225    .data               main.o
+    0x20000002   0x00000028   Data   RW         1270    .data               steppermotor.o
+    0x2000002a   0x0000002c   Data   RW         1271    .data               steppermotor.o
+    0x20000056   0x00000002   PAD
+    0x20000058   0x00000048   Zero   RW         1269    .bss                steppermotor.o
+    0x200000a0   0x00000200   Zero   RW         1134    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       214         18          0          1          0       7151   main.o
+        28          4        236          0        512        920   startup_stm32f10x_md.o
+       418         48          0         84         72       5175   steppermotor.o
+      1004         60         66          0          0     256173   stm32f10x_dma.o
+        88         16         68          0          0       1329   stm32f10x_flash.o
+       544        100         67          0          0       3400   stm32f10x_gpio.o
+       220         34          0          1          0       9408   stm32f10x_it.o
+       954        124         66          0          0      12090   stm32f10x_rcc.o
+       988        146         66          0          0       7479   stm32f10x_tim.o
+         0          0          4          0          0       1024   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+      4470        550        612         88        584     304149   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        12          0          7          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        86         16          0          0          0         68   mc_w.l
+
+    ----------------------------------------------------------------------
+        86         16          0          0          0         68   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      4556        566        612         88        584     302081   Grand Totals
+      4556        566        612         88        584     302081   ELF Image Totals
+      4556        566        612         88          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 5168 (   5.05kB)
+    Total RW  Size (RW Data + ZI Data)               672 (   0.66kB)
+    Total ROM Size (Code + RO Data + RW Data)       5256 (   5.13kB)
+
+==============================================================================
+

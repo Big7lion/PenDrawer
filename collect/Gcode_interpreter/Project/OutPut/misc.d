@@ -1,0 +1,12 @@
+.\output\misc.o: ..\FWLib\misc.c
+.\output\misc.o: ..\FWLib\misc.h
+.\output\misc.o: ..\FWLib\stm32f10x.h
+.\output\misc.o: ..\FWLib\core_cm3.h
+.\output\misc.o: D:\circuit\mcu\keil_u5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\misc.o: ..\FWLib\system_stm32f10x.h
+.\output\misc.o: ..\FWLib\stm32f10x_conf.h
+.\output\misc.o: ..\FWLib\stm32f10x_gpio.h
+.\output\misc.o: ..\FWLib\stm32f10x.h
+.\output\misc.o: ..\FWLib\stm32f10x_rcc.h
+.\output\misc.o: ..\FWLib\stm32f10x_usart.h
+.\output\misc.o: ..\FWLib\misc.h

@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NRF_CE Pin=P1-8
+Removed Pin From Net: NetName=NRF_CSN Pin=P1-9
+Added Pin To Net: NetName=NRF_CSN Pin=P1-8
+Added Pin To Net: NetName=NRF_CE Pin=P1-9
+Added Room: Name=Sheet1

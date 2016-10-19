@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=DIRX Pin=P1-2
+Removed Pin From Net: NetName=PC14 Pin=P3-2
+Removed Pin From Net: NetName=PC15 Pin=P3-3
+Added Pin To Net: NetName=DIRX Pin=P1-5
+Added Pin To Net: NetName=PB9 Pin=P3-2
+Added Pin To Net: NetName=PB8 Pin=P3-3
+Added Pin To Net: NetName=PC13 Pin=P1-2
+Added Net: Name=PC13
+Added Room: Name=Sheet1

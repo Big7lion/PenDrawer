@@ -1,0 +1,17 @@
+.\output\main.o: ..\User\main.c
+.\output\main.o: ..\User\main.h
+.\output\main.o: ..\FWLib\stm32f10x_conf.h
+.\output\main.o: ..\FWLib\stm32f10x_gpio.h
+.\output\main.o: ..\FWLib\stm32f10x.h
+.\output\main.o: ..\FWLib\core_cm3.h
+.\output\main.o: D:\circuit\mcu\keil_u5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\main.o: ..\FWLib\system_stm32f10x.h
+.\output\main.o: ..\FWLib\stm32f10x_conf.h
+.\output\main.o: ..\FWLib\stm32f10x_rcc.h
+.\output\main.o: ..\FWLib\stm32f10x_usart.h
+.\output\main.o: ..\FWLib\misc.h
+.\output\main.o: ..\User\usart.h
+.\output\main.o: D:\circuit\mcu\keil_u5\ARM\ARMCC\bin\..\include\string.h
+.\output\main.o: ..\lcd\lcd.h
+.\output\main.o: ..\gcode_parser\gcode.h
+.\output\main.o: ..\User\main.h

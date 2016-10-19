@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=GND Pin=P3-1
+Removed Pin From Net: NetName=GND Pin=P4-1
+Added Component: Designator=P6(HDR1X4)
+Added Component: Designator=P7(HDR2X4)
+Added Pin To Net: NetName=3V3 Pin=P6-1
+Added Pin To Net: NetName=PA10 Pin=P6-2
+Added Pin To Net: NetName=PA9 Pin=P6-3
+Added Pin To Net: NetName=GND Pin=P6-4
+Added Pin To Net: NetName=GND Pin=P7-1
+Added Pin To Net: NetName=3V3 Pin=P7-2
+Added Pin To Net: NetName=GND Pin=P7-3
+Added Pin To Net: NetName=3V3 Pin=P7-4
+Added Pin To Net: NetName=GND Pin=P7-5
+Added Pin To Net: NetName=3V3 Pin=P7-6
+Added Pin To Net: NetName=GND Pin=P7-7
+Added Pin To Net: NetName=3V3 Pin=P7-8
+Added Member To Class: ClassName=Sheet1 Member=Component P6 Header 4
+Added Member To Class: ClassName=Sheet1 Member=Component P7 Header 4X2
+Added Room: Name=Sheet1

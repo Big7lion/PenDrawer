@@ -1,0 +1,13 @@
+.\output\lcd.o: ..\lcd\lcd.c
+.\output\lcd.o: ..\lcd\lcd.h
+.\output\lcd.o: ..\FWLib\stm32f10x_rcc.h
+.\output\lcd.o: ..\FWLib\stm32f10x.h
+.\output\lcd.o: ..\FWLib\core_cm3.h
+.\output\lcd.o: D:\circuit\mcu\keil_u5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\lcd.o: ..\FWLib\system_stm32f10x.h
+.\output\lcd.o: ..\FWLib\stm32f10x_conf.h
+.\output\lcd.o: ..\FWLib\stm32f10x_gpio.h
+.\output\lcd.o: ..\FWLib\stm32f10x.h
+.\output\lcd.o: ..\FWLib\stm32f10x_rcc.h
+.\output\lcd.o: ..\FWLib\stm32f10x_usart.h
+.\output\lcd.o: ..\FWLib\misc.h

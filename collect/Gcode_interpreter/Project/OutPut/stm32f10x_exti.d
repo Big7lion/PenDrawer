@@ -1,0 +1,12 @@
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_exti.c
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_exti.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x.h
+.\output\stm32f10x_exti.o: ..\FWLib\core_cm3.h
+.\output\stm32f10x_exti.o: D:\circuit\mcu\keil_u5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\stm32f10x_exti.o: ..\FWLib\system_stm32f10x.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_conf.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_gpio.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_rcc.h
+.\output\stm32f10x_exti.o: ..\FWLib\stm32f10x_usart.h
+.\output\stm32f10x_exti.o: ..\FWLib\misc.h
