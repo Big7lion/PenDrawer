@@ -496,11 +496,12 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=stepcontroller\startup_stm32f103xb.d -ostepcontroller\startup_stm3
-2f103xb.o -I..\Inc -I"F:\3-课题 机械臂\StepController\MDK-ARM\RTE" -I"F:\4-tool
-s\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include" -I"F:\4-tools\Keil 5.21\ARM
-\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include" --predefine="__MICROLIB SETA 1" 
---predefine="__UVISION_VERSION SETA 521" --predefine="_RTE_ SETA 1" --predefine
-="STM32F10X_MD SETA 1" --list=startup_stm32f103xb.lst startup_stm32f103xb.s
+2f103xb.o -I..\Inc -I"F:\3-课题 机械臂\PenDrawer\StepController\MDK-ARM\RTE" -I
+"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include" -I"F:\4-tools\Kei
+l 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include" --predefine="__MICROLI
+B SETA 1" --predefine="__UVISION_VERSION SETA 521" --predefine="_RTE_ SETA 1" -
+-predefine="STM32F10X_MD SETA 1" --list=startup_stm32f103xb.lst startup_stm32f1
+03xb.s
 
 
 

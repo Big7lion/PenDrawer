@@ -21,17 +21,21 @@ Target DLL:      Segger\JL2CM3.dll V2.99.23.0
 Dialog DLL:      TARMSTM.DLL V1.65.0.0
  
 <h2>Project:</h2>
-F:\3-课题 机械臂\DRAWER\USER\TOUCH.uvprojx
+F:\3-课题 机械臂\PenDrawer\DRAWER\USER\TOUCH.uvprojx
 Project File Date:  10/14/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'F:\4-tools\Keil 5.21\ARM\ARMCC\Bin'
 Build target 'Target 1'
-compiling main.c...
-linking...
-Program Size: Code=21814 RO-data=8934 RW-data=116 ZI-data=1054372  
-FromELF: creating hex file...
-"..\OBJ\TOUCH.axf" - 0 Error(s), 0 Warning(s).
+compiling test.c...
+test.c(16): warning:  #9-D: nested comment is not allowed
+  /////////////////////////////////////////////////////////////////////////////////*/
+test.c(223): error:  #268: declaration may not appear after executable statement in block
+  	u16 colorTemp=0;
+test.c(275): error:  #167: argument of type "u16 *" is incompatible with parameter of type "u8 *"
+  				NRF24L01_TxPacket(PenData);
+test.c: 1 warning, 2 errors
+"..\OBJ\TOUCH.axf" - 2 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -42,14 +46,15 @@ Package Vendor: ARM
    * Component: CORE Version: 4.3.0
 
 <h2>Collection of Component include folders:</h2>
-  F:\3-课题 机械臂\DRAWER\USER\RTE
+  F:\3-课题 机械臂\PenDrawer\DRAWER\USER\RTE
   F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
   F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

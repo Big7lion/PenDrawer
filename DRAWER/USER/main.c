@@ -34,6 +34,8 @@ int main(void)
 			{LCD_ShowString(30,60,16,"AT24CXX Check Failed!",1);}
 	LCD_ShowString(30,30,16,"NRF24L01 Check Success!",1);
 	LCD_ShowString(30,60,16,"AT24CXX Check Success!",1);
+	NRF24L01_Connect_Check();
+	
 	delay_ms(1000);
 	
 	

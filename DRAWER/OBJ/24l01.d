@@ -36,3 +36,4 @@
 ..\obj\24l01.o: ..\HARDWARE\SPI\spi.h
 ..\obj\24l01.o: ..\SYSTEM\usart\usart.h
 ..\obj\24l01.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\24l01.o: ..\USER\GUI.h

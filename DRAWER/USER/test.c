@@ -6,27 +6,17 @@
 #include "key.h" 
 #include "led.h"
 #include "pic.h"
-//////////////////////////////////////////////////////////////////////////////////	 
-//本程序只供学习使用，未经作者许可，不得用于其它任何用途
-//测试硬件：单片机STM32F103RBT6,主频72M  单片机工作电压3.3V
-//QDtech-TFT液晶驱动 for STM32 IO模拟
-//xiao冯@ShenZhen QDtech co.,LTD
-//公司网站:www.qdtech.net
-//淘宝网站：http://qdtech.taobao.com
-//我司提供技术支持，任何技术问题欢迎随时交流学习
-//固话(传真) :+86 0755-23594567 
-//手机:15989313508（冯工） 
-//邮箱:QDtech2008@gmail.com 
-//Skype:QDtech2008
-//技术交流QQ群:324828016
-//创建日期:2013/5/13
-//版本：V1.1
-//版权所有，盗版必究。
-//Copyright(C) 深圳市全动电子技术有限公司 2009-2019
-//All rights reserved
-//////////////////////////////////////////////////////////////////////////////////
+#include "24l01.h"
+#include <string.h>
+/*/////////////////////////////////////////////////////////////////////////////////	 
+
+NRF24L01：发送检查数据为0x55;接收检查数据为0x56; 帧首数据为0x80;
+
+
+/////////////////////////////////////////////////////////////////////////////////*/
 //========================variable==========================//
 u16 ColorTab[5]={BRED,YELLOW,RED,GREEN,BLUE};//定义颜色数组
+u16 PenData[76801];
 //=====================end of variable======================//
 
 //******************************************************************
@@ -226,9 +216,10 @@ void Pic_test(void)
 //******************************************************************
 void Touch_Test(void)
 {
-u8 key;
-	u8 i=0;
+	u8 key;
+	u32 i=1;					//屏幕画点计数
 	u16 j=0;
+	PenData[0]=0x80;  //首位
 	u16 colorTemp=0;
 	TP_Init();
 	KEY_Init();
@@ -241,6 +232,8 @@ u8 key;
 	{
 	 	key=KEY_Scan();
 		tp_dev.scan(0); 		 
+		
+/*******************显示界面************************/
 		if(tp_dev.sta&TP_PRES_DOWN)			//触摸屏被按下
 		{	
 		 	if(tp_dev.x<lcddev.width&&tp_dev.y<lcddev.height)
@@ -260,22 +253,42 @@ u8 key;
 				delay_ms(10);
 				}
 
-				else TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图	  			   
+				
+/********************触屏数据******************/				
+				
+				else
+				{
+				TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图
+				PenData[i]=(tp_dev.x-5)<<8;															//存一个XY数据
+				PenData[i]=(tp_dev.y-3);
+				i++;
+				}
+			
 			}
-		}else delay_ms(10);	//没有按键按下的时候 	    
-		if(key==1)	//KEY_RIGHT按下,则执行校准程序
+		}
+		else
+		{
+			delay_ms(10);	//没有按键按下的时候 
+			LCD_ShowNum(30,30,i,5,12);
+			if(i>10)
+			{
+				NRF24L01_TxPacket(PenData);
+				memset(PenData,0,i+1);
+				PenData[0] = 0x80;
+				i=1;
+			}
+		}
+		
+		
+		
+		
+		if(key==4)	//KEY_Wake_Up按下,则执行校准程序
 		{
 
 			LCD_Clear(WHITE);//清屏
 		    TP_Adjust();  //屏幕校准 
 			TP_Save_Adjdata();	 
 			DrawTestPage("Please Draw In Here");
-		}
-		i++;
-		if(i==20)
-		{
-			i=0;
-			LED0=!LED0;
 		}
 	}   
 }

@@ -3,6 +3,7 @@
 #include "delay.h"
 #include "spi.h"
 #include "usart.h"
+#include "GUI.h"
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
 //ALIENTEK战舰STM32开发板
@@ -15,7 +16,7 @@
 //Copyright(C) 广州市星翼电子科技有限公司 2009-2019
 //All rights reserved									  
 //////////////////////////////////////////////////////////////////////////////////
-    
+void NRF24L01_Connect_Check(void);
 const u8 TX_ADDRESS[TX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01}; //发送地址
 const u8 RX_ADDRESS[RX_ADR_WIDTH]={0x34,0x43,0x10,0x10,0x01};
 
@@ -153,8 +154,8 @@ u8 NRF24L01_TxPacket(u8 *txbuf)
 	}
 	return 0xff;//其他原因发送失败
 }
-//启动NRF24L01发送一次数据
-//txbuf:待发送数据首地址
+//启动NRF24L01接收一次数据
+//Rxbuf:待接收数据首地址
 //返回值:0，接收完成；其他，错误代码
 u8 NRF24L01_RxPacket(u8 *rxbuf)
 {
@@ -206,6 +207,36 @@ void NRF24L01_TX_Mode(void)
 	NRF24L01_CE=1;//CE为高,10us后启动发送
 }
 
-
-
-
+ 
+ void NRF24L01_Connect_Check(void)
+ {
+		uint8_t data;
+		NRF24L01_TX_Mode();																//设为发送模式
+		delay_ms(50);
+		data=0x55;
+		if(NRF24L01_TxPacket(&data)==TX_OK)								//返回0x56
+		{
+			LCD_ShowString(30,90,16,"NRF24L01 have send data!",1);
+		}
+		delay_ms(20);
+				
+		NRF24L01_RX_Mode();                               //设为接收模式
+		while(1)
+		{	 
+			delay_ms(50);
+			if(NRF24L01_RxPacket(&data)==0)
+			{
+				if(data==0x56)
+					{
+						LCD_ShowString(30,120,16,"NRF24L01 Connect Sucess!",1);
+						break;
+					}
+			else 
+				LCD_ShowString(30,120,16,"NRF24L01 Recieve Wrong Data!",1);
+		}	
+		else
+		{
+				LCD_ShowString(30,120,16,"NRF24L01 have not recieve any data!",1);
+		}
+	 }
+ }

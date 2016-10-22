@@ -66,12 +66,15 @@
 #define YSET0 BIT_ADDR(GPIOB_ODR_Addr,10)
 #define YSET1 BIT_ADDR(GPIOB_ODR_Addr,11)
 
+#define X_EN BIT_ADDR(GPIOB_ODR_Addr,5)
+#define Y_EN BIT_ADDR(GPIOB_ODR_Addr,4)
+
 /*
 *********************************************************************************************************
 *                                       主函数调用
 *********************************************************************************************************
 */
 void USART_SendData(void const * argument, ...);
-
+void bsp_Check(void);
 
 #endif
