@@ -34,7 +34,7 @@ int main(void)
 			{LCD_ShowString(30,60,16,"AT24CXX Check Failed!",1);}
 	LCD_ShowString(30,30,16,"NRF24L01 Check Success!",1);
 	LCD_ShowString(30,60,16,"AT24CXX Check Success!",1);
-	NRF24L01_Connect_Check();
+//	NRF24L01_Connect_Check();
 	
 	delay_ms(1000);
 	
@@ -42,7 +42,7 @@ int main(void)
 	while(1)
 	{	
 
-			main_test(); 		//测试主界面
+//			main_test(); 		//测试主界面
 		//MYDMA_Enable(DMA1_Channel5);//开始一次DMA传输！	  
 		//DMA_ClearFlag(DMA1_FLAG_TC4);//清除通道4传输完成标志
 		

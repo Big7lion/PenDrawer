@@ -195,16 +195,23 @@ void Touch_Test(void)
 	u8 tmp = 0;					//内存申请标志位
 	u16 j=0;
 	u16 colorTemp=0;
+	u16 adjx=0,adjy=0;
 	u32 i=1;					//屏幕画点计数
 	TP_Init();
 	KEY_Init();
 //	TP_Adjust();  		//强制执行一次屏幕校准 (适用于没有IIC存储触摸参数的用户)
+	
+
+	
+	
 	DrawTestPage("Please Draw In Here");
 	LCD_ShowString(lcddev.width-24,0,16,"RST",1);//显示清屏区域
 	LCD_Fill(lcddev.width-52,2,lcddev.width-50+20,18,RED); 
-	POINT_COLOR=RED;
+
 		while(1)
 	{
+		LCD_ShowString(10,45,12,"memory",0);
+		LCD_ShowString(10,30,12,"point",0);
 	 	key=KEY_Scan();
 		tp_dev.scan(0); 	
 		if(tmp==0)	 
@@ -224,7 +231,7 @@ void Touch_Test(void)
 					LCD_ShowString(lcddev.width-24,0,16,"RST",1);//显示清屏区域
 					POINT_COLOR=colorTemp;
 					LCD_Fill(lcddev.width-52,2,lcddev.width-50+20,18,POINT_COLOR); 
-					memset(PenData,0,i+1);
+//					memset(PenData,0,i+1);
 					myfree(SRAMIN,PenData);
 					tmp=0;
 					i=1;
@@ -242,34 +249,40 @@ void Touch_Test(void)
 				
 				else
 				{
-					TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图
-					PenData[i]=(tp_dev.x-5)<<8;															//存一个XY数据
-					PenData[i]=(tp_dev.y-3);
-					i++;
-
+					
+					if((tp_dev.x-adjx)>=1||(tp_dev.y-adjy)>=1)
+					{
+						TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图
+						adjx=tp_dev.x;
+						adjy=tp_dev.y;
+						PenData[i]|=((tp_dev.x-5)<<8)|(tp_dev.y-3);															//存一个XY数据
+//						PenData[i]|=(tp_dev.y-3);
+						i++;
+					}
 					/*简单的溢出数据判断*/
 					if(i/100>=rmtmp)
 					{
 						PenData=(u16*)myrealloc(SRAMIN,PenData,(rmtmp+1)*100*sizeof(u16));
 						rmtmp++;
-						LCD_ShowNum(30,45,my_mem_perused(SRAMIN),3,12);
+						
 					}
+					LCD_ShowNum(80,45,my_mem_perused(SRAMIN),3,12);
 				}
 			
 			}
 		}
 		else
 		{
-			delay_ms(10);	//没有按键按下的时候 
-			LCD_ShowNum(30,30,i,5,12);
-			if(i>10)
-			{
-				NRF24L01_TxPacket16(PenData);
-				memset(PenData,0,i+1);
-				myfree(SRAMIN,PenData);
-				tmp=0;
-				i=1;
-			}
+			delay_ms(5);	//没有按键按下的时候 
+			LCD_ShowNum(80,30,i,5,12);
+//			if(i>10)
+//			{
+//				NRF24L01_TxPacket16(PenData);
+//				memset(PenData,0,i+1);
+//				myfree(SRAMIN,PenData);
+//				tmp=0;
+//				i=1;
+//			}
 		}
 		
 /*****************按键处理********************/		
