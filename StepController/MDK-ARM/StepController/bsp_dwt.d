@@ -51,3 +51,4 @@ stepcontroller\bsp_dwt.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/lis
 stepcontroller\bsp_dwt.o: ../Inc/bsp_24C02.h
 stepcontroller\bsp_dwt.o: ../Inc/bsp_NRF.h
 stepcontroller\bsp_dwt.o: ../Inc/include.h
+stepcontroller\bsp_dwt.o: ../Inc/bsp_stepper.h

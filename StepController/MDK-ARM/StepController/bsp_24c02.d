@@ -51,3 +51,4 @@ stepcontroller\bsp_24c02.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/l
 stepcontroller\bsp_24c02.o: ../Inc/bsp_24C02.h
 stepcontroller\bsp_24c02.o: ../Inc/bsp_NRF.h
 stepcontroller\bsp_24c02.o: ../Inc/include.h
+stepcontroller\bsp_24c02.o: ../Inc/bsp_stepper.h

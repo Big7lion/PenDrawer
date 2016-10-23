@@ -28,7 +28,7 @@
 #include "bsp_dwt.h"
 #include "bsp_24C02.h"
 #include "bsp_NRF.h"
-
+#include "bsp_stepper.h"
 
 /*
 *********************************************************************************************************
@@ -37,6 +37,10 @@
 */
 #define SDA_IN()  {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(uint32_t)8<<28;}
 #define SDA_OUT()  {GPIOB->CRL&=0X0FFFFFFF;GPIOB->CRL|=(uint32_t)3<<28;}
+
+#define GPIOA_BASE_Addr   0x40010800
+#define GPIOB_BASE_Addr   0x40010C00
+#define GPIOC_BASE_Addr   0x40011000
 
 #define GPIOA_ODR_Addr    0x4001080C 
 #define GPIOA_IDR_Addr    0x40010808 

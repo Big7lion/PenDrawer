@@ -57,3 +57,4 @@ stepcontroller\freertos.o: ../Inc/bsp_dwt.h
 stepcontroller\freertos.o: ../Inc/bsp_24C02.h
 stepcontroller\freertos.o: ../Inc/bsp_NRF.h
 stepcontroller\freertos.o: ../Inc/include.h
+stepcontroller\freertos.o: ../Inc/bsp_stepper.h

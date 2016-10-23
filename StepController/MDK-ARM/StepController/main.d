@@ -58,3 +58,4 @@ stepcontroller\main.o: ../Inc/bsp_dwt.h
 stepcontroller\main.o: ../Inc/bsp_24C02.h
 stepcontroller\main.o: ../Inc/bsp_NRF.h
 stepcontroller\main.o: ../Inc/include.h
+stepcontroller\main.o: ../Inc/bsp_stepper.h
