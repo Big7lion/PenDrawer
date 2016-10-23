@@ -1,0 +1,12 @@
+..\Obj\marlinserial.o: ..\..\Marlin\MarlinSerial.c
+..\Obj\marlinserial.o: ..\..\Marlin\MarlinSerial.h
+..\Obj\marlinserial.o: ..\..\Marlin\Marlin.h
+..\Obj\marlinserial.o: C:\soft\Keil\ARM\RV31\Inc\math.h
+..\Obj\marlinserial.o: C:\soft\Keil\ARM\RV31\Inc\stdio.h
+..\Obj\marlinserial.o: C:\soft\Keil\ARM\RV31\Inc\stdlib.h
+..\Obj\marlinserial.o: C:\soft\Keil\ARM\RV31\Inc\string.h
+..\Obj\marlinserial.o: ..\..\Marlin\Configuration.h
+..\Obj\marlinserial.o: ..\..\Marlin\Configuration_adv.h
+..\Obj\marlinserial.o: ..\..\Thermistor\thermistortables.h
+..\Obj\marlinserial.o: ..\..\Marlin\Marlin.h
+..\Obj\marlinserial.o: ..\..\Marlin\pins.h

@@ -1,0 +1,75 @@
+*** Creating Trace Output File '..\Obj\3Dprinter_firmware.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"..\obj\startup_stm32f10x_hd.o"'
+### List of Objects: adding '"..\obj\delay.o"'
+### List of Objects: adding '"..\obj\system_stm32f10x.o"'
+### List of Objects: adding '"..\obj\sys.o"'
+### List of Objects: adding '"..\obj\usart.o"'
+### List of Objects: adding '"..\obj\adc.o"'
+### List of Objects: adding '"..\obj\iic.o"'
+### List of Objects: adding '"..\obj\rtc.o"'
+### List of Objects: adding '"..\obj\spi.o"'
+### List of Objects: adding '"..\obj\misc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_gpio.o"'
+### List of Objects: adding '"..\obj\stm32f10x_rcc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_usart.o"'
+### List of Objects: adding '"..\obj\stm32f10x_fsmc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_exti.o"'
+### List of Objects: adding '"..\obj\stm32f10x_tim.o"'
+### List of Objects: adding '"..\obj\stm32f10x_rtc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_bkp.o"'
+### List of Objects: adding '"..\obj\stm32f10x_pwr.o"'
+### List of Objects: adding '"..\obj\stm32f10x_adc.o"'
+### List of Objects: adding '"..\obj\stm32f10x_spi.o"'
+### List of Objects: adding '"..\obj\stm32f10x_sdio.o"'
+### List of Objects: adding '"..\obj\lcd.o"'
+### List of Objects: adding '"..\obj\beep.o"'
+### List of Objects: adding '"..\obj\switch.o"'
+### List of Objects: adding '"..\obj\24cxx.o"'
+### List of Objects: adding '"..\obj\flash.o"'
+### List of Objects: adding '"..\obj\sram.o"'
+### List of Objects: adding '"..\obj\touch.o"'
+### List of Objects: adding '"..\obj\watchdog.o"'
+### List of Objects: adding '"..\obj\sdio_sdcard.o"'
+### List of Objects: adding '"..\obj\malloc.o"'
+### List of Objects: adding '"..\obj\stepper.o"'
+### List of Objects: adding '"..\obj\temperature.o"'
+### List of Objects: adding '"..\obj\exfuns.o"'
+### List of Objects: adding '"..\obj\fattester.o"'
+### List of Objects: adding '"..\obj\mycc936.o"'
+### List of Objects: adding '"..\obj\diskio.o"'
+### List of Objects: adding '"..\obj\ff.o"'
+### List of Objects: adding '"..\obj\fontupd.o"'
+### List of Objects: adding '"..\obj\text.o"'
+### List of Objects: adding '"..\obj\bmp.o"'
+### List of Objects: adding '"..\obj\piclib.o"'
+### List of Objects: adding '"..\obj\gif.o"'
+### List of Objects: adding '"..\obj\tjpgd.o"'
+### List of Objects: adding '"..\obj\marlin.o"'
+### List of Objects: adding '"..\obj\planner.o"'
+### List of Objects: adding '"..\obj\motion_control.o"'
+### List of Objects: adding '"..\obj\configurationstore.o"'
+### List of Objects: adding '"..\obj\lcdmenu.o"'
+### List of Objects: adding '"..\obj\gui.o"'
+### List of Objects: adding '"..\obj\progressbar.o"'
+### List of Objects: adding '"..\obj\button.o"'
+### List of Objects: adding '"..\obj\filelistbox.o"'
+### List of Objects: adding '"..\obj\scrollbar.o"'
+### List of Objects: adding '"..\obj\gcodeplayer.o"'
+### List of Objects: adding '"..\obj\main.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "..\obj\startup_stm32f10x_hd.o" "..\obj\delay.o" "..\obj\system_stm32f10x.o" "..\obj\sys.o" "..\obj\usart.o" "..\obj\adc.o" "..\obj\iic.o" "..\obj\rtc.o" "..\obj\spi.o" "..\obj\misc.o" "..\obj\stm32f10x_gpio.o" "..\obj\stm32f10x_rcc.o" "..\obj\stm32f10x_usart.o" "..\obj\stm32f10x_fsmc.o" "..\obj\stm32f10x_exti.o" "..\obj\stm32f10x_tim.o" "..\obj\stm32f10x_rtc.o" "..\obj\stm32f10x_bkp.o" "..\obj\stm32f10x_pwr.o" "..\obj\stm32f10x_adc.o" "..\obj\stm32f10x_spi.o" "..\obj\stm32f10x_sdio.o" "..\obj\lcd.o" "..\obj\beep.o" "..\obj\switch.o" "..\obj\24cxx.o" "..\obj\flash.o" "..\obj\sram.o" "..\obj\touch.o" "..\obj\watchdog.o" "..\obj\sdio_sdcard.o" "..\obj\malloc.o" "..\obj\stepper.o" "..\obj\temperature.o" "..\obj\exfuns.o" "..\obj\fattester.o" "..\obj\mycc936.o" "..\obj\diskio.o" "..\obj\ff.o" "..\obj\fontupd.o" "..\obj\text.o" "..\obj\bmp.o" "..\obj\piclib.o" "..\obj\gif.o" "..\obj\tjpgd.o" "..\obj\marlin.o" "..\obj\planner.o" "..\obj\motion_control.o" "..\obj\configurationstore.o" "..\obj\lcdmenu.o" "..\obj\gui.o" "..\obj\progressbar.o" "..\obj\button.o" "..\obj\filelistbox.o" "..\obj\scrollbar.o" "..\obj\gcodeplayer.o" "..\obj\main.o" --strict --scatter "..\Obj\3Dprinter_firmware.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list "..\List\3Dprinter_firmware.map" -o "..\Obj\3Dprinter_firmware.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '..\Obj\3Dprinter_firmware.axf'
+### ADS-LD Command File: '..\Obj\3Dprinter_firmware.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '..\Obj\3Dprinter_firmware.lnp', Handle=0x00000588
+### Writing '.lnp' file
+### ADS-LD Command file '..\Obj\3Dprinter_firmware.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

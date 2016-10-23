@@ -1,0 +1,433 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\TT\Desktop\V9.0\Project\Pro\3Dprinter_firmware.uvproj
+Project File Date:  08/24/2015
+
+<h2>Output:</h2>
+compiling stepper.c...
+..\..\Step_motor\stepper.c(402): error:  #20: identifier "X_MAX_PIN" is undefined
+..\..\Step_motor\stepper.c(98): warning:  #177-D: variable "old_y_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c(100): warning:  #177-D: variable "old_z_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c - 1 Error(s), 2 Warning(s).
+compiling stepper.c...
+..\..\Step_motor\stepper.c(392): error:  #11-D: unrecognized preprocessing directive
+..\..\Step_motor\stepper.c(383): error:  #37: the #endif for this directive is missing
+..\..\Step_motor\stepper.c(96): warning:  #177-D: variable "old_x_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c(98): warning:  #177-D: variable "old_y_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c(100): warning:  #177-D: variable "old_z_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c - 2 Error(s), 3 Warning(s).
+compiling stepper.c...
+..\..\Step_motor\stepper.c(96): warning:  #177-D: variable "old_x_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c(98): warning:  #177-D: variable "old_y_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c(100): warning:  #177-D: variable "old_z_max_endstop" was declared but never referenced
+..\..\Step_motor\stepper.c - 0 Error(s), 3 Warning(s).
+compiling stepper.c...
+..\..\Step_motor\stepper.c - 0 Error(s), 0 Warning(s).
+Build target '3Dprinter_firmware'
+linking...
+Program Size: Code=147450 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Rebuild target '3Dprinter_firmware'
+assembling startup_stm32f10x_hd.s...
+compiling delay.c...
+compiling system_stm32f10x.c...
+compiling sys.c...
+compiling usart.c...
+compiling adc.c...
+compiling iic.c...
+compiling rtc.c...
+compiling spi.c...
+compiling misc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_sdio.c...
+compiling lcd.c...
+compiling beep.c...
+compiling switch.c...
+compiling 24cxx.c...
+compiling flash.c...
+compiling sram.c...
+compiling touch.c...
+compiling watchdog.c...
+compiling sdio_sdcard.c...
+compiling malloc.c...
+compiling stepper.c...
+compiling temperature.c...
+compiling exfuns.c...
+compiling fattester.c...
+compiling mycc936.c...
+compiling diskio.c...
+compiling ff.c...
+compiling fontupd.c...
+compiling text.c...
+compiling bmp.c...
+compiling piclib.c...
+compiling gif.c...
+compiling tjpgd.c...
+compiling Marlin.c...
+compiling planner.c...
+compiling motion_control.c...
+compiling ConfigurationStore.c...
+compiling lcdmenu.c...
+compiling gui.c...
+compiling progressbar.c...
+compiling button.c...
+compiling filelistbox.c...
+compiling scrollbar.c...
+compiling gcodeplayer.c...
+compiling main.c...
+linking...
+Program Size: Code=147450 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 0
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
+Build target '3Dprinter_firmware'
+compiling stepper.c...
+compiling temperature.c...
+compiling Marlin.c...
+compiling planner.c...
+compiling motion_control.c...
+compiling ConfigurationStore.c...
+compiling lcdmenu.c...
+compiling gcodeplayer.c...
+compiling main.c...
+linking...
+Program Size: Code=147446 RO-data=13922 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.293V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
+Build target '3Dprinter_firmware'
+compiling stepper.c...
+compiling temperature.c...
+compiling Marlin.c...
+compiling planner.c...
+compiling motion_control.c...
+compiling ConfigurationStore.c...
+compiling lcdmenu.c...
+compiling gcodeplayer.c...
+compiling main.c...
+linking...
+Program Size: Code=147462 RO-data=13922 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target '3Dprinter_firmware'
+compiling temperature.c...
+compiling Marlin.c...
+linking...
+Program Size: Code=147490 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target '3Dprinter_firmware'
+compiling temperature.c...
+linking...
+Program Size: Code=147522 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
+Build target '3Dprinter_firmware'
+compiling stepper.c...
+compiling temperature.c...
+compiling Marlin.c...
+compiling planner.c...
+compiling motion_control.c...
+compiling ConfigurationStore.c...
+compiling lcdmenu.c...
+compiling gcodeplayer.c...
+compiling main.c...
+linking...
+Program Size: Code=147534 RO-data=13922 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 0
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
+Build target '3Dprinter_firmware'
+compiling temperature.c...
+compiling main.c...
+linking...
+Program Size: Code=147522 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 0
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
+Build target '3Dprinter_firmware'
+compiling temperature.c...
+compiling Marlin.c...
+linking...
+Program Size: Code=147514 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Build target '3Dprinter_firmware'
+linking...
+Program Size: Code=147514 RO-data=13918 RW-data=1420 ZI-data=276436  
+FromELF: creating hex file...
+"..\Obj\3Dprinter_firmware.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Obj\\3Dprinter_firmware.AXF" 
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+Set JLink Project File to "C:\Users\TT\Desktop\V9.0\Project\Pro\JLinkSettings.ini"
+ 
+JLink info:
+------------
+DLL: V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V8 compiled Sep 22 2014 23:26:43
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.300V
+State of Pins: 
+TCK: 0, TDI: 0, TDO: 0, TMS: 1, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 4000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found SWD-DP with ID 0x1BA01477
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info:   FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+Application running ...
