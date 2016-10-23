@@ -594,6 +594,11 @@
               <FileType>1</FileType>
               <FilePath>..\Src\bsp.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_stepper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\bsp_stepper.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
