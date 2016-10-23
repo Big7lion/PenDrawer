@@ -39,4 +39,5 @@
 ..\obj\test.o: ..\HARDWARE\LED\led.h
 ..\obj\test.o: pic.h
 ..\obj\test.o: ..\HARDWARE\NRF24L01\24l01.h
+..\obj\test.o: ..\HARDWARE\MALLOC\malloc.h
 ..\obj\test.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\string.h

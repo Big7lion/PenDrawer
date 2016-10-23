@@ -240,3 +240,39 @@ void NRF24L01_TX_Mode(void)
 		}
 	 }
  }
+
+
+
+
+u8 NRF24L01_Write_Buf16(u8 reg, u16 *pBuf, u8 len)
+{
+	u8 status,u8_ctr;	    
+ 	NRF24L01_CSN = 0;          //使能SPI传输
+  	status = SPI2_ReadWriteByte(reg);//发送寄存器值(位置),并读取状态值
+  	for(u8_ctr=0; u8_ctr<len; u8_ctr++)SPI2_ReadWriteByte(*pBuf++); //写入数据	 
+  	NRF24L01_CSN = 1;       //关闭SPI传输
+  	return status;          //返回读到的状态值
+}
+
+
+u8 NRF24L01_TxPacket16(u16 *txbuf)
+{
+	u8 sta;
+ 	SPI2_SetSpeed(SPI_BaudRatePrescaler_8);//spi速度为9Mhz（24L01的最大SPI时钟为10Mhz）   
+	NRF24L01_CE=0;
+  NRF24L01_Write_Buf16(WR_TX_PLOAD,txbuf,TX_PLOAD_WIDTH);//写数据到TX BUF  32个字节
+ 	NRF24L01_CE=1;//启动发送	   
+	while(NRF24L01_IRQ!=0);//等待发送完成
+	sta=NRF24L01_Read_Reg(STATUS);  //读取状态寄存器的值	   
+	NRF24L01_Write_Reg(NRF_WRITE_REG+STATUS,sta); //清除TX_DS或MAX_RT中断标志
+	if(sta&MAX_TX)//达到最大重发次数
+	{
+		NRF24L01_Write_Reg(FLUSH_TX,0xff);//清除TX FIFO寄存器 
+		return MAX_TX; 
+	}
+	if(sta&TX_OK)//发送完成
+	{
+		return TX_OK;
+	}
+	return 0xff;//其他原因发送失败
+}
