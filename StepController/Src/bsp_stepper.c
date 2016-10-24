@@ -4,12 +4,12 @@
 /*****************声明*********************/
 #define SAVE_ADDR_BASE 40    //24C02地区基地址
 
-static uint32_t lastpos[2]={lxpos,lypos};			//位置数组
+uint8_t lastpos[2]={lxpos,lypos};			//位置数组
 void Stepper_Save_pos(void);
 void Stepper_Read_pos(void);
 uint8_t Subdivid_Contral(char pass,uint8_t num);
-
-
+//uint16_t lxpos = Stepper_Config.CurrentPosition;
+Config_InitStruct  Stepper_Config;
 /****************细分控制设定********************/
 //输入：pass：通道'X' or 'Y'      num：细分数[0，2，4，8]
 uint8_t Subdivid_Contral(char pass,uint8_t num)             //驱动器细分控制
@@ -82,8 +82,6 @@ uint8_t Subdivid_Contral(char pass,uint8_t num)             //驱动器细分控制
 /****************保存最后坐标********************/
 void Stepper_Save_pos(void)
 {
-	
-
 		AT24CXX_WriteOneByte(SAVE_ADDR_BASE,lastpos[0]);  
 		AT24CXX_WriteOneByte(SAVE_ADDR_BASE+1,lastpos[1]);
 		AT24CXX_WriteOneByte(SAVE_ADDR_BASE+2,0x0A);     //表示当前有存储
@@ -101,6 +99,11 @@ void Stepper_Read_pos(void)
 			USART_SendData("NO Data in 24C02!");
 }
 
+void Stepper_Get_pos(void)
+{
+		lastpos[0] = Stepper_Config.CurrentPosition&0xff;
+		lastpos[1] = Stepper_Config.CurrentPosition>>8;
+}
 
 
 

@@ -20,6 +20,17 @@
 #define Z_Bdir()  DIRZ = !Zforwarddirection
 
 
+/******************步进电机设置结构体****************/
+typedef struct
+{
+	volatile uint32_t 	XminStepPrescaller;            //时钟最小分频（最大扭矩）
+	volatile uint32_t 	XmaxStepPrescaller;						//最大分频数（最大速度）
+	volatile uint32_t 	YminStepPrescaller;            //时钟最小分频（最大扭矩）
+	volatile uint32_t 	YmaxStepPrescaller;						//最大分频数（最大速度）
+	volatile uint16_t 	CurrentPosition;							//当前位置
+	volatile uint16_t 	targetPosition;								//目标位置（高八位X坐标，低八位Y坐标）
+	volatile uint8_t    Zstatus;											//Z轴状态（1为按下，0为提起）
+}Config_InitStruct;
 
 
 

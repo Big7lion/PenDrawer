@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.14.14.0
  
 <h2>Project:</h2>
 F:\3-¿ÎÌâ »úÐµ±Û\PenDrawer\StepController\MDK-ARM\StepController.uvprojx
-Project File Date:  10/22/2016
+Project File Date:  10/24/2016
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 3 (build 300)', folder: 'F:\4-tools\Keil 5.21\ARM\ARMCC\Bin'
@@ -34,20 +34,20 @@ compiling freertos.c...
   		sprintf(buf_str,"%s\r\n",argument);
 ../Src/freertos.c: 1 warning, 0 errors
 compiling bsp_NRF.c...
-compiling bsp_dwt.c...
 compiling bsp.c...
 ..\Src\bsp.c(56): warning:  #1-D: last line of file ends without a newline
    
 ..\Src\bsp.c: 1 warning, 0 errors
+compiling bsp_dwt.c...
 compiling bsp_stepper.c...
-..\Src\bsp_stepper.c(74): warning:  #940-D: missing return statement at end of non-void function "Subdivid_Contral"
+..\Src\bsp_stepper.c(79): warning:  #940-D: missing return statement at end of non-void function "Subdivid_Contral"
   }
-..\Src\bsp_stepper.c(5): warning:  #177-D: variable "lastpos" was declared but never referenced
-  static uint32_t lastpos[2]={lxpos,lypos};
-..\Src\bsp_stepper.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=14020 RO-data=432 RW-data=132 ZI-data=4668  
-"StepController\StepController.axf" - 0 Error(s), 4 Warning(s).
+..\Src\bsp_stepper.c(104): error:  #513: a value of type "Config_InitStruct" cannot be assigned to an entity of type "uint8_t"
+  		lastpos[0] = Stepper_Config
+..\Src\bsp_stepper.c(105): error:  #65: expected a ";"
+  }
+..\Src\bsp_stepper.c: 1 warning, 2 errors
+"StepController\StepController.axf" - 2 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -65,7 +65,8 @@ Package Vendor: ARM
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:4.3.0
-Build Time Elapsed:  00:00:22
+Target not created.
+Build Time Elapsed:  00:00:23
 </pre>
 </body>
 </html>
