@@ -46,6 +46,7 @@ stepcontroller\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.
 stepcontroller\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 stepcontroller\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 stepcontroller\main.o: ../Inc/crc.h
+stepcontroller\main.o: ../Inc/dma.h
 stepcontroller\main.o: ../Inc/spi.h
 stepcontroller\main.o: ../Inc/tim.h
 stepcontroller\main.o: ../Inc/usart.h

@@ -47,23 +47,19 @@
 #define GPIOA_IDR_Addr    0x40010808 
 #define GPIOB_IDR_Addr    0x40010C08
 #define GPIOB_ODR_Addr    0x40010C0C
-
-#define IIC_SCL0 	HAL_GPIO_WritePin(GPIOB,SCL_Pin,GPIO_PIN_RESET)
-#define IIC_SCL1 	HAL_GPIO_WritePin(GPIOB,SCL_Pin,GPIO_PIN_SET)
-
-#define IIC_SDA0	HAL_GPIO_WritePin(GPIOB,SDA_Pin, GPIO_PIN_RESET)
-#define IIC_SDA1	HAL_GPIO_WritePin(GPIOB,SDA_Pin, GPIO_PIN_RESET)
-
+//#define SPI_BAUDRATEPRESCALER_8         ((uint32_t)0x00000010)
 
 #define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
 #define MEM_ADDR(addr)  *((volatile unsigned long  *)(addr)) 
 #define BIT_ADDR(addr, bitnum)   MEM_ADDR(BITBAND(addr, bitnum)) 
 
+#define IIC_SCL 	BIT_ADDR(GPIOB_ODR_Addr,6)
+#define IIC_SDA		BIT_ADDR(GPIOB_ODR_Addr,7)
 #define READ_SDA  BIT_ADDR(GPIOB_IDR_Addr,7)
+
 #define NRF24L01_CE  BIT_ADDR(GPIOA_ODR_Addr,4)
 #define NRF24L01_CSN  BIT_ADDR(GPIOA_ODR_Addr,3)
 #define NRF24L01_IRQ  BIT_ADDR(GPIOA_IDR_Addr,2)
-
 
 #define DIRX BIT_ADDR(GPIOA_ODR_Addr,0)
 #define DIRY BIT_ADDR(GPIOB_ODR_Addr,12)
@@ -84,6 +80,7 @@
 *********************************************************************************************************
 */
 void USART_SendData(void const * argument, ...);
+void USART_SendString(void const * argument, ...);
 void bsp_Check(void);
 
 #endif

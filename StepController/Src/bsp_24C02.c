@@ -5,22 +5,22 @@
 void IIC_Start(void)
 {
 	SDA_OUT();     //sda线输出
-	IIC_SDA1;	  	  
-	IIC_SCL1;
+	IIC_SDA=1;	  	  
+	IIC_SCL=1;
 	bsp_DelayUS(4);
- 	IIC_SDA0;//START:when CLK is high,DATA change form high to low 
+ 	IIC_SDA=0;//START:when CLK is high,DATA change form high to low 
 	bsp_DelayUS(4);
-	IIC_SCL0;//钳住I2C总线，准备发送或接收数据 
+	IIC_SCL=0;//钳住I2C总线，准备发送或接收数据 
 }	  
 //产生IIC停止信号
 void IIC_Stop(void)
 {
 	SDA_OUT();//sda线输出
-	IIC_SCL0;
-	IIC_SDA0;//STOP:when CLK is high DATA change form low to high
+	IIC_SCL=0;
+	IIC_SDA=0;//STOP:when CLK is high DATA change form low to high
  	bsp_DelayUS(4);
-	IIC_SCL1; 
-	IIC_SDA1;//发送I2C总线结束信号
+	IIC_SCL=1; 
+	IIC_SDA=1;//发送I2C总线结束信号
 	bsp_DelayUS(4);							   	
 }
 //等待应答信号到来
@@ -30,8 +30,8 @@ uint8_t IIC_Wait_Ack(void)
 {
 	uint8_t ucErrTime=0;
 	SDA_IN();      //SDA设置为输入  
-	IIC_SDA1;bsp_DelayUS(1);	   
-	IIC_SCL1;bsp_DelayUS(1);	 
+	IIC_SDA=1;bsp_DelayUS(1);	   
+	IIC_SCL=1;bsp_DelayUS(1);	 
 	while(READ_SDA)
 	{
 		ucErrTime++;
@@ -41,30 +41,30 @@ uint8_t IIC_Wait_Ack(void)
 			return 1;
 		}
 	}
-	IIC_SCL0;//时钟输出0 	   
+	IIC_SCL=0;//时钟输出0 	   
 	return 0;  
 } 
 //产生ACK应答
 void IIC_Ack(void)
 {
-	IIC_SCL0;
+	IIC_SCL=0;
 	SDA_OUT();
-	IIC_SDA0;
+	IIC_SDA=0;
 	bsp_DelayUS(2);
-	IIC_SCL1;
+	IIC_SCL=1;
 	bsp_DelayUS(2);
-	IIC_SCL0;
+	IIC_SCL=0;
 }
 //不产生ACK应答		    
 void IIC_NAck(void)
 {
-	IIC_SCL0;
+	IIC_SCL=0;
 	SDA_OUT();
-	IIC_SDA1;
+	IIC_SDA=1;
 	bsp_DelayUS(2);
-	IIC_SCL1;
+	IIC_SCL=1;
 	bsp_DelayUS(2);
-	IIC_SCL0;
+	IIC_SCL=0;
 }					 				     
 //IIC发送一个字节
 //返回从机有无应答
@@ -74,19 +74,19 @@ void IIC_Send_Byte(uint8_t txd)
 {                        
     uint8_t t;   
 	SDA_OUT(); 	    
-    IIC_SCL0;//拉低时钟开始数据传输
+    IIC_SCL=0;//拉低时钟开始数据传输
     for(t=0;t<8;t++)
     {              
         //IIC_SDA=(txd&0x80)>>7;
 		if((txd&0x80)>>7)
-			IIC_SDA1;
+			IIC_SDA=1;
 		else
-			IIC_SDA0;
+			IIC_SDA=0;
 		txd<<=1; 	  
 		bsp_DelayUS(2);   //对TEA5767这三个延时都是必须的
-		IIC_SCL1;
+		IIC_SCL=1;
 		bsp_DelayUS(2); 
-		IIC_SCL0;	
+		IIC_SCL=0;	
 		bsp_DelayUS(2);
     }	 
 } 	    
@@ -97,9 +97,9 @@ uint8_t IIC_Read_Byte(unsigned char ack)
 	SDA_IN();//SDA设置为输入
     for(i=0;i<8;i++ )
 	{
-        IIC_SCL0; 
+        IIC_SCL=0; 
         bsp_DelayUS(2);
-		IIC_SCL1;
+				IIC_SCL=1;
         receive<<=1;
         if(READ_SDA)receive++;   
 		bsp_DelayUS(1); 

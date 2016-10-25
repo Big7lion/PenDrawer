@@ -85,6 +85,7 @@ int main(void)
   MX_DMA_Init();
   MX_CRC_Init();
   MX_SPI1_Init();
+//	HAL_SPI_MspInit(&hspi1);
   MX_TIM2_Init();
   MX_USART1_UART_Init();
   MX_TIM3_Init();
@@ -93,7 +94,7 @@ int main(void)
 	bsp_InitNRF();
 	bsp_InitDWT();
 	bsp_Check();
-	USART_SendData("System Start!\r\n");
+	USART_SendString("System Start!\r\n");
 //	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_2);
   /* USER CODE END 2 */
 

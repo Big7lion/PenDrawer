@@ -1,21 +1,24 @@
  #include "include.h"
  
+
  void NRF24L01_Connect_Check(void);
+ void USART_SendString(void const * argument, ...);
+ 
  
  void bsp_Check(void)
  {		
 	 while(AT24CXX_Check())
 		{
-			USART_SendData("24C02 Check fail!\r\n");
+			USART_SendString("24C02 Check Fail!\r\n");
 			HAL_Delay(500);
 		}
-		USART_SendData("24C02 READY!\r\n");
+			USART_SendString("24C02 Ready!\r\n");
 		while(NRF24L01_Check())
 		{
-			USART_SendData("NRF24L01 Check fail!\r\n");
+			USART_SendString("NRF24L01 Check Fail!\r\n");
 			HAL_Delay(500);
 		}
-		USART_SendData("NRF24L01 READY!\r\n");
+		USART_SendString("NRF24L01 READY!\r\n");
 		
 		NRF24L01_Connect_Check();
  }
@@ -31,15 +34,15 @@
 		{
 			if(data==0x55)
 				{
-					USART_SendData("NRF24L01 Connect Sucess!\r\n");
+					USART_SendString("NRF24L01 Connect Sucess!\r\n");
 					break;
 				}
 			else 
-				USART_SendData("NRF24L01 Recieve Wrong Data!\r\n");
+				USART_SendString("NRF24L01 Recieve Wrong Data!\r\n");
 		}	
 		else
 		{
-			USART_SendData("NRF24L01 have not recieve any data!\r\n");
+			USART_SendString("NRF24L01 have not recieve any data!\r\n");
 		}
 	 }
 	 
@@ -48,9 +51,19 @@
 	 data=0x56;
 	 if(NRF24L01_TxPacket(&data)==TX_OK)								//·µ»Ø0x56
 	 {
-			USART_SendData("NRF24L01 have send backdata!\r\n");
+			USART_SendString("NRF24L01 have send backdata!\r\n");
 	 }
 	 HAL_Delay(20);
  }
 
  
+ void USART_SendString(void const * argument, ...)
+{
+    char  buf_str[50];
+	
+		sprintf(buf_str,"%s\r\n",argument);
+
+    HAL_UART_Transmit(&huart1,(uint8_t*)buf_str,strlen(buf_str),300);
+
+}
+
