@@ -5,7 +5,6 @@
 #include "touch.h"
 #include "key.h" 
 #include "led.h"
-#include "pic.h"
 #include "24l01.h"
 #include "malloc.h"
 #include <string.h>
@@ -39,45 +38,8 @@ Gui_StrCenter(0,lcddev.height-18,WHITE,BLUE,"BIG LION",16,1);//居中显示
 LCD_Fill(0,20,lcddev.width,lcddev.height-20,BLACK);
 }
 
-//******************************************************************
-//函数名：  main_test
-//功能：    绘制全动电子综合测试程序主界面
-//输入参数：无
-//返回值：  无
-//******************************************************************
-void main_test(void)
-{
-	DrawTestPage("全动电子综合测试程序");
-	
-	Gui_StrCenter(0,30,RED,BLUE,"全动电子",16,1);//居中显示
-	Gui_StrCenter(0,60,RED,BLUE,"综合测试程序",16,1);//居中显示	
-	Gui_StrCenter(0,90,YELLOW,BLUE,"3.2' ILI9341 240X320",16,1);//居中显示
-	Gui_StrCenter(0,120,BLUE,BLUE,"xiaoFeng@QDtech 2014-02-25",16,1);//居中显示
-	delay_ms(1500);		
-	delay_ms(1500);
-}
 
-//******************************************************************
-//函数名：  Test_Color
-//功能：    颜色填充测试，依次填充白色、黑色、红色、绿色、蓝色
-//输入参数：无
-//返回值：  无
-//******************************************************************
-void Test_Color(void)
-{
-	DrawTestPage("测试1:纯色填充测试");
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,WHITE);
-	Show_Str(lcddev.width-50,30,BLUE,YELLOW,"White",16,1);delay_ms(500);
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,BLACK);
-	Show_Str(lcddev.width-50,30,BLUE,YELLOW,"Black",16,1);delay_ms(500);
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,RED);
-	Show_Str(lcddev.width-50,30,BLUE,YELLOW,"Red",16,1); delay_ms(500);
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,GREEN);
-	Show_Str(lcddev.width-50,30,BLUE,YELLOW,"Green",16,1);delay_ms(500);
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,BLUE);
-	Show_Str(lcddev.width-50,30,WHITE,YELLOW,"Blue",16,1);delay_ms(500);
 
-}
 
 //******************************************************************
 //函数名：  Test_FillRec
@@ -127,25 +89,6 @@ void Test_Circle(void)
 	delay_ms(1500);
 }
 
-//******************************************************************
-//函数名：  English_Font_test
-//功能：    英文显示测试 
-//输入参数：无
-//返回值：  无
-//******************************************************************
-void English_Font_test(void)
-{
-	DrawTestPage("测试4:英文显示测试");
-	POINT_COLOR=RED;
-	BACK_COLOR=BLUE;
-	LCD_ShowString(10,30,12,"6X12:abcdefghijklmnopqrstuvwxyz0123456789",0);
-	LCD_ShowString(10,45,12,"6X12:ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",1);
-	LCD_ShowString(10,60,12,"6X12:~!@#$%^&*()_+{}:<>?/|-+.",0);
-	LCD_ShowString(10,80,16,"8X16:abcdefghijklmnopqrstuvwxyz0123456789",0);
-	LCD_ShowString(10,100,16,"8X16:ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",1);
-	LCD_ShowString(10,120,16,"8X16:~!@#$%^&*()_+{}:<>?/|-+.",0); 
-	delay_ms(1200);
-}
 
 //******************************************************************
 //函数名：  Chinese_Font_test
@@ -163,51 +106,33 @@ void Chinese_Font_test(void)
 	delay_ms(1200);
 }
 
-//******************************************************************
-//函数名：  Pic_test
-//功能：    图片显示测试，依次显示三幅40X40 QQ图像
-//输入参数：无
-//返回值：  无
-//******************************************************************
-void Pic_test(void)
-{
-	DrawTestPage("测试6:图片显示测试");
-	LCD_Fill(0,20,lcddev.width,lcddev.height-20,WHITE);
-	Gui_Drawbmp16(30,30,gImage_qq);
-	Show_Str(30+12,75,BLUE,YELLOW,"QQ",16,1);
-	Gui_Drawbmp16(90,30,gImage_qq);
-	Show_Str(90+12,75,BLUE,YELLOW,"QQ",16,1);
-	Gui_Drawbmp16(150,30,gImage_qq);
-	Show_Str(150+12,75,BLUE,YELLOW,"QQ",16,1);
-	delay_ms(1200);
-}
 
 //******************************************************************
-//函数名：  Touch_Test
-//功能：    触摸手写测试
+//函数名：  Touch_Request
+//功能：    基于触摸手写测试修改的本项目函数
 //输入参数：无
 //返回值：  无
 //******************************************************************
-void Touch_Test(void)
+void Touch_Request(void)
 {
 	u8 key;
 	u8 rmtmp=1;					//内存申请大小计数
 	u8 tmp = 0;					//内存申请标志位
+	u8 ltmp = 0;        //软件取点滤波计数
+	u8 rectmp;					//应答数据
+	vu8 pointx[5],pointy[5];
 	u16 j=0;
-	u16 colorTemp=0;
-	u16 adjx=0,adjy=0;
+	u16 colorTemp=0;		//颜色切换计数
+	vu16 adjx=0,adjy=0;
 	u32 i=1;					//屏幕画点计数
 	TP_Init();
 	KEY_Init();
 //	TP_Adjust();  		//强制执行一次屏幕校准 (适用于没有IIC存储触摸参数的用户)
-	
 
-	
-	
 	DrawTestPage("Please Draw In Here");
 	LCD_ShowString(lcddev.width-24,0,16,"RST",1);//显示清屏区域
 	LCD_Fill(lcddev.width-52,2,lcddev.width-50+20,18,RED); 
-
+	POINT_COLOR=RED;
 		while(1)
 	{
 		LCD_ShowString(10,45,12,"memory",0);
@@ -246,43 +171,36 @@ void Touch_Test(void)
 
 				
 /********************触屏数据******************/				
-				
 				else
 				{
-					
-					if((tp_dev.x-adjx)>=1||(tp_dev.y-adjy)>=1)
-					{
 						TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图
-						adjx=tp_dev.x;
-						adjy=tp_dev.y;
-						PenData[i]|=((tp_dev.x-5)<<8)|(tp_dev.y-3);															//存一个XY数据
-//						PenData[i]|=(tp_dev.y-3);
-						i++;
-					}
-					/*简单的溢出数据判断*/
-					if(i/100>=rmtmp)
-					{
-						PenData=(u16*)myrealloc(SRAMIN,PenData,(rmtmp+1)*100*sizeof(u16));
-						rmtmp++;
-						
-					}
-					LCD_ShowNum(80,45,my_mem_perused(SRAMIN),3,12);
+						pointx[ltmp]=tp_dev.x;pointy[ltmp]=tp_dev.y;ltmp++;
+						if(ltmp==5)
+						{
+							PenData[i]=((pointx[3]-5)<<8)|(pointy[3]-3);															//存一个XY数据
+							ltmp=0;
+							i++;
+							if(i/100>=rmtmp)					/*简单的溢出数据判断*/		
+								{
+									PenData=(u16*)myrealloc(SRAMIN,PenData,(rmtmp+1)*100*sizeof(u16));
+									rmtmp++;
+									LCD_ShowNum(80,45,my_mem_perused(SRAMIN),3,12);     //显示内部SRAM使用量
+								}			
+						}
 				}
 			
 			}
 		}
 		else
 		{
-			delay_ms(5);	//没有按键按下的时候 
+			delay_ms(20);	//没有按键按下的时候 
 			LCD_ShowNum(80,30,i,5,12);
-//			if(i>10)
-//			{
-//				NRF24L01_TxPacket16(PenData);
-//				memset(PenData,0,i+1);
-//				myfree(SRAMIN,PenData);
-//				tmp=0;
-//				i=1;
-//			}
+			if(i>10)
+			{
+					myfree(SRAMIN,PenData);
+					tmp=0;
+					i=1;
+			}
 		}
 		
 /*****************按键处理********************/		
@@ -293,6 +211,26 @@ void Touch_Test(void)
 		    TP_Adjust();  //屏幕校准 
 			TP_Save_Adjdata();	 
 			DrawTestPage("Please Draw In Here");
+		}
+		else if(key==1)
+		{
+			LCD_Fill(60,100,260,150,WHITE);
+			POINT_COLOR=RED;
+			LCD_ShowString(85,120,12,"START WIRELESS TRANSMIT!",1);
+			NRF24L01_TX_Mode();
+			NRF24L01_TxPacket(&rmtmp);
+			NRF24L01_TxPacket16(PenData);
+			delay_ms(20);
+			NRF24L01_RX_Mode();
+			while(NRF24L01_RxPacket(&rectmp));
+			LCD_Fill(60,100,260,150,WHITE);
+			if(rectmp==0x56)
+			{
+				LCD_ShowString(100,120,16,"TRANSMIT SUCCESS!",1);
+				delay_ms(2000);
+			}
+			else 
+				LCD_ShowString(70,1200,12,"NO lowerMCU ECHO! Please check!",1);
 		}
 	}   
 }

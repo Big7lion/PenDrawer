@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=DIRY Pin=P2-20
+Removed Pin From Net: NetName=PB5 Pin=P3-1
+Removed Pin From Net: NetName=PB4 Pin=P4-1
+Removed Pin From Net: NetName=PB11 Pin=P4-3
+Added Component: Designator=P6(HDR1X4)
+Added Pin To Net: NetName=DIRY Pin=P1-12
+Added Pin To Net: NetName=DIRZ Pin=P1-15
+Added Pin To Net: NetName=PA2 Pin=P2-4
+Added Pin To Net: NetName=PA3 Pin=P2-5
+Added Pin To Net: NetName=PA4 Pin=P3-1
+Added Pin To Net: NetName=PA2 Pin=P3-2
+Added Pin To Net: NetName=PA3 Pin=P3-3
+Added Pin To Net: NetName=PA6 Pin=P4-1
+Added Pin To Net: NetName=PA5 Pin=P4-2
+Added Pin To Net: NetName=3V3 Pin=P6-1
+Added Pin To Net: NetName=PA10 Pin=P6-2
+Added Pin To Net: NetName=PA9 Pin=P6-3
+Added Pin To Net: NetName=GND Pin=P6-4
+Added Pin To Net: NetName=PB12 Pin=P2-20
+Added Net: Name=PB12
+Added Pin To Net: NetName=YSET1 Pin=P4-3
+Added Net: Name=YSET1
+Added Member To Class: ClassName=Sheet1 Member=Component P6 Header 4
+Added Room: Name=Sheet1

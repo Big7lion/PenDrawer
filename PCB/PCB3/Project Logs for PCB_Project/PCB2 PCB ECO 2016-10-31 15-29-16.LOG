@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NRF_CE Pin=U1-87
+Added Pin To Net: NetName=NRF_CSN Pin=U1-89
+Added Pin To Net: NetName=NRF_IRQ Pin=U1-93
+Added Room: Name=Sheet2

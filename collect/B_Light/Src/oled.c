@@ -1,0 +1,379 @@
+#include "stm32f1xx_hal.h"
+#include "oled.h"
+#include <stdarg.h>
+#include <stdio.h>
+
+uint8_t videoMemory[8][128];
+struct szCode                 // 数字字模数据结构
+{
+    uint8_t index[1];               // ascii码
+    uint8_t msk[6];                       // 点阵码数据
+};
+const struct szCode sz[] =                 // ASCII
+{
+    " ",0x00, 0x00, 0x00, 0x00, 0x00, 0x00,//
+    "!",0xff, 1, 1, 1, 1, 1,
+    //"!",0x00, 0x00, 0x00, 0x2f, 0x00, 0x00,// !
+    "\"",0x00, 0x00, 0x07, 0x00, 0x07, 0x00,// "
+    "#",0x00, 0x14, 0x7f, 0x14, 0x7f, 0x14,// #
+    "$",0x00, 0x24, 0x2a, 0x7f, 0x2a, 0x12,// $
+    "%",0x00, 0x62, 0x64, 0x08, 0x13, 0x23,// %
+    "&",0x00, 0x36, 0x49, 0x55, 0x22, 0x50,// &
+    "'",0x00, 0x00, 0x05, 0x03, 0x00, 0x00,// '
+    "(",0x00, 0x00, 0x1c, 0x22, 0x41, 0x00,// (
+    ")",0x00, 0x00, 0x41, 0x22, 0x1c, 0x00,// )
+    "*",0x00, 0x14, 0x08, 0x3E, 0x08, 0x14,// *
+    "+",0x00, 0x08, 0x08, 0x3E, 0x08, 0x08,// +
+    ",",0x00, 0x00, 0x00, 0xA0, 0x60, 0x00,// ,
+    "-",0x00, 0x08, 0x08, 0x08, 0x08, 0x08,// -
+    ".",0x00, 0x00, 0x60, 0x60, 0x00, 0x00,// .
+    "/",0x00, 0x20, 0x10, 0x08, 0x04, 0x02,// /
+    "0",0x00, 0x3E, 0x41, 0x41, 0x41, 0x3E,// 0
+    "1",0x00, 0x00, 0x42, 0x7F, 0x40, 0x00,// 1
+    "2",0x00, 0x42, 0x61, 0x51, 0x49, 0x46,// 2
+    "3",0x00, 0x21, 0x41, 0x45, 0x4B, 0x31,// 3
+    "4",0x00, 0x18, 0x14, 0x12, 0x7F, 0x10,// 4
+    "5",0x00, 0x27, 0x45, 0x45, 0x45, 0x39,// 5
+    "6",0x00, 0x3C, 0x4A, 0x49, 0x49, 0x30,// 6
+    "7",0x00, 0x01, 0x71, 0x09, 0x05, 0x03,// 7
+    "8",0x00, 0x36, 0x49, 0x49, 0x49, 0x36,// 8
+    "9",0x00, 0x06, 0x49, 0x49, 0x29, 0x1E,// 9
+    ":",0x00, 0x00, 0x36, 0x36, 0x00, 0x00,// :
+    ";",0x00, 0x00, 0x56, 0x36, 0x00, 0x00,// ;
+    "<",0x00, 0x08, 0x14, 0x22, 0x41, 0x00,// <
+    "=",0x00, 0x14, 0x14, 0x14, 0x14, 0x14,// =
+    ">",0x00, 0x00, 0x41, 0x22, 0x14, 0x08,// >
+    "?",0x00, 0x02, 0x01, 0x51, 0x09, 0x06,// ?
+    "@",0x00, 0x32, 0x49, 0x59, 0x51, 0x3E,// @
+    "A",0x00, 0x7C, 0x12, 0x11, 0x12, 0x7C,// A
+    "B",0x00, 0x7F, 0x49, 0x49, 0x49, 0x36,// B
+    "C",0x00, 0x3E, 0x41, 0x41, 0x41, 0x22,// C
+    "D",0x00, 0x7F, 0x41, 0x41, 0x22, 0x1C,// D
+    "E",0x00, 0x7F, 0x49, 0x49, 0x49, 0x41,// E
+    "F",0x00, 0x7F, 0x09, 0x09, 0x09, 0x01,// F
+    "G",0x00, 0x3E, 0x41, 0x49, 0x49, 0x7A,// G
+    "H",0x00, 0x7F, 0x08, 0x08, 0x08, 0x7F,// H
+    "I",0x00, 0x00, 0x41, 0x7F, 0x41, 0x00,// I
+    "J",0x00, 0x20, 0x40, 0x41, 0x3F, 0x01,// J
+    "K",0x00, 0x7F, 0x08, 0x14, 0x22, 0x41,// K
+    "L",0x00, 0x7F, 0x40, 0x40, 0x40, 0x40,// L
+    "M",0x00, 0x7F, 0x02, 0x0C, 0x02, 0x7F,// M
+    "N",0x00, 0x7F, 0x04, 0x08, 0x10, 0x7F,// N
+    "O",0x00, 0x3E, 0x41, 0x41, 0x41, 0x3E,// O
+    "P",0x00, 0x7F, 0x09, 0x09, 0x09, 0x06,// P
+    "Q",0x00, 0x3E, 0x41, 0x51, 0x21, 0x5E,// Q
+    "R",0x00, 0x7F, 0x09, 0x19, 0x29, 0x46,// R
+    "S",0x00, 0x46, 0x49, 0x49, 0x49, 0x31,// S
+    "T",0x00, 0x01, 0x01, 0x7F, 0x01, 0x01,// T
+    "U",0x00, 0x3F, 0x40, 0x40, 0x40, 0x3F,// U
+    "V",0x00, 0x1F, 0x20, 0x40, 0x20, 0x1F,// V
+    "W",0x00, 0x3F, 0x40, 0x38, 0x40, 0x3F,// W
+    "X",0x00, 0x63, 0x14, 0x08, 0x14, 0x63,// X
+    "Y",0x00, 0x07, 0x08, 0x70, 0x08, 0x07,// Y
+    "Z",0x00, 0x61, 0x51, 0x49, 0x45, 0x43,// Z
+    "[",0x00, 0x00, 0x7F, 0x41, 0x41, 0x00,// [
+    "]",0x00, 0x00, 0x41, 0x41, 0x7F, 0x00,// ]
+    "^",0x00, 0x04, 0x02, 0x01, 0x02, 0x04,// ^
+    "_",0x00, 0x40, 0x40, 0x40, 0x40, 0x40,// _
+    "'",0x00, 0x00, 0x01, 0x02, 0x04, 0x00,// '
+    "a",0x00, 0x20, 0x54, 0x54, 0x54, 0x78,// a
+    "b",0x00, 0x7F, 0x48, 0x44, 0x44, 0x38,// b
+    "c",0x00, 0x38, 0x44, 0x44, 0x44, 0x20,// c
+    "d",0x00, 0x38, 0x44, 0x44, 0x48, 0x7F,// d
+    "e",0x00, 0x38, 0x54, 0x54, 0x54, 0x18,// e
+    "f",0x00, 0x08, 0x7E, 0x09, 0x01, 0x02,// f
+    "g",0x00, 0x18, 0xA4, 0xA4, 0xA4, 0x7C,// g
+    "h",0x00, 0x7F, 0x08, 0x04, 0x04, 0x78,// h
+    "i",0x00, 0x00, 0x44, 0x7D, 0x40, 0x00,// i
+    "j",0x00, 0x40, 0x80, 0x84, 0x7D, 0x00,// j
+    "k",0x00, 0x7F, 0x10, 0x28, 0x44, 0x00,// k
+    "l",0x00, 0x00, 0x41, 0x7F, 0x40, 0x00,// l
+    "m",0x00, 0x7C, 0x04, 0x18, 0x04, 0x78,// m
+    "n",0x00, 0x7C, 0x08, 0x04, 0x04, 0x78,// n
+    "o",0x00, 0x38, 0x44, 0x44, 0x44, 0x38,// o
+    "p",0x00, 0xFC, 0x24, 0x24, 0x24, 0x18,// p
+    "q",0x00, 0x18, 0x24, 0x24, 0x18, 0xFC,// q
+    "r",0x00, 0x7C, 0x08, 0x04, 0x04, 0x08,// r
+    "s",0x00, 0x48, 0x54, 0x54, 0x54, 0x20,// s
+    "t",0x00, 0x04, 0x3F, 0x44, 0x40, 0x20,// t
+    "u",0x00, 0x3C, 0x40, 0x40, 0x20, 0x7C,// u
+    "v",0x00, 0x1C, 0x20, 0x40, 0x20, 0x1C,// v
+    "w",0x00, 0x3C, 0x40, 0x30, 0x40, 0x3C,// w
+    "x",0x00, 0x44, 0x28, 0x10, 0x28, 0x44,// x
+    "y",0x00, 0x1C, 0xA0, 0xA0, 0xA0, 0x7C,// y
+    "z",0x00, 0x44, 0x64, 0x54, 0x4C, 0x44,// z
+};
+
+//延时
+void Delay_OLED(uint16_t i)
+{
+    while(i--);
+}
+//*//****************************************//***************************************//***************************************
+/**********************************************
+//IIC Start
+**********************************************/
+
+void IIC_Start()
+{
+    OLED_SCLK_Set();
+    OLED_SDIN_Set();
+    OLED_SDIN_Clr();
+    OLED_SCLK_Clr();
+}
+
+/**********************************************
+//IIC Stop
+**********************************************/
+
+void IIC_Stop()
+{
+    OLED_SCLK_Set() ;
+    //	OLED_SCLK_Clr();
+    OLED_SDIN_Clr();
+    OLED_SDIN_Set();
+
+}
+
+void IIC_Wait_Ack()
+{
+    OLED_SCLK_Set();
+    OLED_SCLK_Clr();
+}
+/**********************************************
+// IIC Write byte
+**********************************************/
+
+void Write_IIC_Byte(uint8_t IIC_Byte)
+{
+    uint8_t i;
+    uint8_t m;
+    OLED_SCLK_Clr();
+    for (i = 0; i < 8; i++)
+    {
+        m = IIC_Byte;
+        m = m & 0x80;
+        if(m == 0x80)
+        {
+            OLED_SDIN_Set();
+        }
+        else
+        {
+            OLED_SDIN_Clr();
+        }
+        IIC_Byte = IIC_Byte << 1;
+        OLED_SCLK_Set();
+        OLED_SCLK_Clr();
+    }
+}
+/**********************************************
+// IIC Write Command
+**********************************************/
+void Write_IIC_Command(uint8_t IIC_Command)
+{
+    IIC_Start();
+    Write_IIC_Byte(0x78);            //Slave address,SA0=0
+    IIC_Wait_Ack();
+    Write_IIC_Byte(0x00);			//write command
+    IIC_Wait_Ack();
+    Write_IIC_Byte(IIC_Command);
+    IIC_Wait_Ack();
+    IIC_Stop();
+
+}
+/**********************************************
+// IIC Write Data
+**********************************************/
+void Write_IIC_Data(uint8_t IIC_Data)
+{
+
+    IIC_Start();
+    Write_IIC_Byte(0x78);			//D/C#=0; R/W#=0
+    IIC_Wait_Ack();
+    Write_IIC_Byte(0x40);			//write data
+    IIC_Wait_Ack();
+    Write_IIC_Byte(IIC_Data);
+    IIC_Wait_Ack();
+    IIC_Stop();
+}
+//向屏幕写入一个字节数据或命令
+void Write_OLED(uint8_t dat, uint8_t cmd)
+{
+    if (cmd == OLED_DATA)
+        Write_IIC_Data(dat);
+    else
+        Write_IIC_Command(dat);
+}
+
+//**********************************//**********************************//**********************************//**********************************
+
+//在屏幕指定位置点亮或熄灭一个点
+void OLED_WR_Dots(uint8_t x,uint8_t y,uint8_t state)
+{
+    uint8_t wei = 1,page;
+    page = y/8;
+    if(state)
+        videoMemory[page][x] = videoMemory[page][x] |  (wei<<=y%8);
+    else
+        videoMemory[page][x] = videoMemory[page][x] & ~(wei<<=y%8);
+    Write_OLED (0xb0 + page, OLED_CMD);     //设置页地址（0~7）
+    Write_OLED( (x&0x0f)    |0x02,OLED_CMD); //设置显示位置―列低地址
+    Write_OLED(((x&0xf0)>>4)|0x10,OLED_CMD); //设置显示位置―列高地址
+    Write_OLED(videoMemory[page][x] , OLED_DATA);
+}
+
+//刷屏函数
+//输入参数： 首页，尾页，首列，尾列，刷屏1 or 清屏0
+void OLED_Clear(uint8_t page1,uint8_t page2,uint8_t col1,uint8_t col2,uint8_t fs)
+{
+    uint8_t i, j;
+
+    for (i = page1; i < page2 + 1; i++)
+    {
+        Write_OLED(   0xb0 + i     ,OLED_CMD);            //设置页地址（0~7）
+        Write_OLED(((col1&0xf0)>>4)|0x10,OLED_CMD); //设置显示位置―列高地址
+        Write_OLED(  (col1&0x0f),OLED_CMD); //设置显示位置―列低地址
+        for (j = col1; j < col2 + 1; j++)
+        {
+            if(!fs)
+                videoMemory[i][j] = 0x0;
+            Write_OLED(videoMemory[i][j] , OLED_DATA);
+        }
+
+    } //更新显示
+}
+//初始化OLED屏幕
+void OLED_Init(void)
+{
+
+    //GPIO_QuickInit(HW_GPIOC, 1, kGPIO_Mode_OPP);
+    //GPIO_QuickInit(HW_GPIOC, 2, kGPIO_Mode_OPP);
+
+    CLOSE_OLED;               //--turn off oled panel
+    Write_OLED(0x00,OLED_CMD);//---set low column address
+    Write_OLED(0x10,OLED_CMD);//---set high column address
+    Write_OLED(0x40,OLED_CMD);//--set start line address
+    Write_OLED(0xB0,OLED_CMD);//--set page address
+    Write_OLED(0x81,OLED_CMD); // contract control
+    Write_OLED(0xFF,OLED_CMD);//--128
+    Write_OLED(0xA1,OLED_CMD);//set segment remap
+    Write_OLED(0xA6,OLED_CMD);//--normal / reverse
+    Write_OLED(0xA8,OLED_CMD);//--set multiplex ratio(1 to 64)
+    Write_OLED(0x3F,OLED_CMD);//--1/32 duty
+    Write_OLED(0xC8,OLED_CMD);//Com scan direction
+    Write_OLED(0xD3,OLED_CMD);//-set display offset
+    Write_OLED(0x00,OLED_CMD);//
+
+    Write_OLED(0xD5,OLED_CMD);//set osc division
+    Write_OLED(0x80,OLED_CMD);//
+
+    Write_OLED(0xD8,OLED_CMD);//set area color mode off
+    Write_OLED(0x05,OLED_CMD);//
+
+    Write_OLED(0xD9,OLED_CMD);//Set Pre-Charge Period
+    Write_OLED(0xF1,OLED_CMD);//
+
+    Write_OLED(0xDA,OLED_CMD);//set com pin configuartion
+    Write_OLED(0x12,OLED_CMD);//
+
+    Write_OLED(0xDB,OLED_CMD);//set Vcomh
+    Write_OLED(0x30,OLED_CMD);//
+
+    Write_OLED(0x8D,OLED_CMD);//set charge pump enable
+    Write_OLED(0x14,OLED_CMD);//
+
+    OPEN_OLED;//--打开OLED显示
+    OLED_Clear(0,7,0,127,0);
+}
+//显示单个数字或汉字
+//输入参数： 首页，首列，字符码地址，是否反白，数字或汉字
+
+void showStr(uint8_t row,uint8_t col,uint8_t const *p,uint8_t fb,uint8_t charType)
+{
+    uint8_t i,j,page = row/8,yu = row%8,ptmp;
+    uint16_t temp;
+    const uint16_t arr[8]= {0,0xfe01,0xfc03,0xf807,0xf00f,0xe01f,0xc03f,0x807f};
+    uint8_t page_len;
+    page_len = ((row%8==0)?1:2);
+    for(i = page; i < page + 1; i++)
+    {
+        for(j = col; j<col + ZiKuan + charType; j++)
+        {
+            if(page_len == 1)
+            {
+                videoMemory[i][j] = fb?(~(*p)):*p;
+            }
+            else
+            {
+                if(fb)
+                {
+                    ptmp = (~*p);
+                    temp = ((videoMemory[i+1][j]<<8)|videoMemory[i][j])&arr[yu];
+                    temp |= ptmp<<yu;
+                    videoMemory[i][j]   = temp&0xff;
+                    videoMemory[i+1][j] = (temp>>8);
+                }
+                else
+                {
+                    temp = ((videoMemory[i+1][j]<<8)|videoMemory[i][j])&arr[yu];
+                    temp |= *p<<yu;
+                    videoMemory[i][j]   = temp&0xff;
+                    videoMemory[i+1][j] = (temp>>8);
+                }
+            }
+            p++;
+        }
+    }
+}
+void OLED_Puts(uint8_t row,uint8_t col,uint8_t fb,char const *p)
+{
+    uint8_t coltemp,i;
+    coltemp = col;
+    while(1)
+    {
+        if(!(*p))
+        {
+            return;
+        }
+        for(i=0;; i++)
+        {
+            if(*p == '\r')
+            {
+                col = coltemp = 0;
+                p ++;
+                break;
+            }
+            if(*p == '\n' && row <= 51)
+            {
+                col = coltemp;
+                row += ZiGao;
+                p ++;
+                break;
+            }
+            if(*p == sz[i].index[0])
+            {
+                if(col+ZiKuan > 127)
+                {
+                    col =  0;
+                    row += ZiGao;
+                }
+                showStr(row,col,sz[i].msk,fb,ShuZi);
+                col += ZiKuan;
+                p ++;
+                break;
+            }
+        }
+    }
+}
+//显示一个字符串
+//输入参数：首页，首列，字符串，是否反白，换行后起始位置
+
+void OLED_showWord(uint8_t row,uint8_t col,uint8_t fb,char const *p,...)
+{
+    char str[160];
+    va_list ap;
+    va_start(ap, p);//用于接收动态参数
+    vsprintf(str, p, ap);
+    va_end(ap);
+    OLED_Puts(row,col,fb,str);
+}

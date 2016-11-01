@@ -10,8 +10,8 @@
 #include "malloc.h"
 #include "24cxx.h"
 
-#define SEND_BUF_SIZE 8200	//发送数据长度,最好等于sizeof(TEXT_TO_SEND)+2的整数倍.
-u8 SendBuff[SEND_BUF_SIZE];	//发送数据缓冲区
+//#define SEND_BUF_SIZE 8200	//发送数据长度,最好等于sizeof(TEXT_TO_SEND)+2的整数倍.
+//u8 SendBuff[SEND_BUF_SIZE];	//发送数据缓冲区
 
 
 int main(void)
@@ -20,12 +20,12 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 	delay_init();	     //延时初始化
 	LCD_Init();	   //液晶屏初始化
-//	SPI2_Init();
+	SPI2_Init();
 	AT24CXX_Init();
 	NRF24L01_Init();
-	
-	MYDMA_Config(DMA1_Channel5,(u32)&SPI2->DR,(u32)SendBuff,SEND_BUF_SIZE);
-	SPI_I2S_DMACmd(SPI2,SPI_I2S_DMAReq_Tx,ENABLE);
+	my_mem_init(SRAMIN);	
+//	MYDMA_Config(DMA1_Channel5,(u32)&SPI2->DR,(u32)SendBuff,SEND_BUF_SIZE);
+//	SPI_I2S_DMACmd(SPI2,SPI_I2S_DMAReq_Tx,ENABLE);
 /******************硬件检查*******************/
 	LCD_Clear(WHITE);
 	while(NRF24L01_Check())
@@ -45,10 +45,6 @@ int main(void)
 //			main_test(); 		//测试主界面
 		//MYDMA_Enable(DMA1_Channel5);//开始一次DMA传输！	  
 		//DMA_ClearFlag(DMA1_FLAG_TC4);//清除通道4传输完成标志
-		
-		
-		
-		
 /*		Test_Color();  		//简单刷屏填充测试
 		Test_FillRec();		//GUI矩形绘图测试
 		Test_Circle(); 		//GUI画圆测试
@@ -56,7 +52,7 @@ int main(void)
 		Chinese_Font_test();//中文字体示例测试
 		Pic_test();			//图片显示示例测试
 */
-		Touch_Test();		//触摸屏手写测试  */
+		Touch_Request();		//触摸屏手写测试  */
 	}				  
 	
  }

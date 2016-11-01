@@ -1,0 +1,17 @@
+Added Component: Designator=P1(PCBComponent_1)
+Added Pin To Net: NetName=X_EN Pin=P1-1
+Added Pin To Net: NetName=XSET0 Pin=P1-2
+Added Pin To Net: NetName=XSET1 Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=STEPX Pin=P1-7
+Added Pin To Net: NetName=DIRX Pin=P1-8
+Added Pin To Net: NetName=12V Pin=P1-9
+Added Pin To Net: NetName=GND Pin=P1-10
+Added Pin To Net: NetName=NetC1_1 Pin=P1-11
+Added Pin To Net: NetName=NetC1_2 Pin=P1-12
+Added Pin To Net: NetName=NetC1_3 Pin=P1-13
+Added Pin To Net: NetName=NetC1_4 Pin=P1-14
+Added Pin To Net: NetName=3V3 Pin=P1-15
+Added Pin To Net: NetName=GND Pin=P1-16
+Added Member To Class: ClassName=Sheet2 Member=Component P1 Header 8X2A
+Added Room: Name=Sheet2

@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"b_light\startup_stm32f103xe.o"
+"b_light\stm32f1xx_hal_msp.o"
+"b_light\stm32f1xx_it.o"
+"b_light\main.o"
+"b_light\oled.o"
+"b_light\nrf24l01.o"
+"b_light\system_stm32f1xx.o"
+"b_light\stm32f1xx_hal_pwr.o"
+"b_light\stm32f1xx_hal_flash.o"
+"b_light\stm32f1xx_hal_gpio.o"
+"b_light\stm32f1xx_hal_tim_ex.o"
+"b_light\stm32f1xx_hal_gpio_ex.o"
+"b_light\stm32f1xx_hal_dma.o"
+"b_light\stm32f1xx_hal_spi_ex.o"
+"b_light\stm32f1xx_hal.o"
+"b_light\stm32f1xx_hal_flash_ex.o"
+"b_light\stm32f1xx_hal_tim.o"
+"b_light\stm32f1xx_hal_rcc_ex.o"
+"b_light\stm32f1xx_hal_rcc.o"
+"b_light\stm32f1xx_hal_cortex.o"
+"b_light\stm32f1xx_hal_spi.o"
+--library_type=microlib --strict --scatter "B_Light\B_Light.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "B_Light.map" -o B_Light\B_Light.axf
