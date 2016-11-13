@@ -4,6 +4,7 @@ stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\std
 stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdio.h
 stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdlib.h
 stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\string.h
+stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\math.h
 stepcontroller3\bsp_stepper.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stddef.h
 stepcontroller3\bsp_stepper.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdint.h
@@ -52,6 +53,7 @@ stepcontroller3\bsp_stepper.o: ../Middlewares/Third_Party/FreeRTOS/Source/includ
 stepcontroller3\bsp_stepper.o: ../Inc/crc.h
 stepcontroller3\bsp_stepper.o: ../Inc/spi.h
 stepcontroller3\bsp_stepper.o: ../Inc/tim.h
+stepcontroller3\bsp_stepper.o: ../Inc/dma.h
 stepcontroller3\bsp_stepper.o: ../Inc/usart.h
 stepcontroller3\bsp_stepper.o: ../Inc/gpio.h
 stepcontroller3\bsp_stepper.o: ../Inc/malloc.h

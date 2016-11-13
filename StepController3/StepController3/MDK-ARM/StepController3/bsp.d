@@ -4,6 +4,7 @@ stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdarg.h
 stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdio.h
 stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdlib.h
 stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\string.h
+stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\math.h
 stepcontroller3\bsp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stddef.h
 stepcontroller3\bsp.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdint.h
@@ -52,6 +53,7 @@ stepcontroller3\bsp.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_
 stepcontroller3\bsp.o: ../Inc/crc.h
 stepcontroller3\bsp.o: ../Inc/spi.h
 stepcontroller3\bsp.o: ../Inc/tim.h
+stepcontroller3\bsp.o: ../Inc/dma.h
 stepcontroller3\bsp.o: ../Inc/usart.h
 stepcontroller3\bsp.o: ../Inc/gpio.h
 stepcontroller3\bsp.o: ../Inc/malloc.h

@@ -1,9 +1,0 @@
-Removed Pin From Net: NetName=3V3 Pin=R3-1
-Removed Pin From Net: NetName=3V3 Pin=R3-2
-Added Pin To Net: NetName=DIRZ Pin=P2-19
-Added Pin To Net: NetName=DIRY Pin=P2-20
-Added Pin To Net: NetName=PC14 Pin=P3-2
-Added Pin To Net: NetName=PC15 Pin=P3-3
-Added Pin To Net: NetName=PB10 Pin=P4-2
-Added Pin To Net: NetName=PB11 Pin=P4-3
-Added Room: Name=Sheet1

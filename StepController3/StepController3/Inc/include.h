@@ -14,6 +14,7 @@
 #include  <stdio.h>
 #include  <stdlib.h>
 #include  <string.h>
+#include  <math.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "stm32f1xx_hal.h"
@@ -21,6 +22,7 @@
 #include "crc.h"
 #include "spi.h"
 #include "tim.h"
+#include "dma.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -72,10 +74,10 @@
 
 #define DIRX BIT_ADDR(GPIOA_ODR_Addr,2)
 #define DIRY BIT_ADDR(GPIOC_ODR_Addr,5)
-#define DIRZ BIT_ADDR(GPIOB_ODR_Addr,2)
+#define DIRZ BIT_ADDR(GPIOB_ODR_Addr,1)
 
 #define XSET0 BIT_ADDR(GPIOC_ODR_Addr,1)
-#define XSET1 BIT_ADDR(GPIOC_ODR_Addr,2)
+#define XSET1 BIT_ADDR(GPIOC_ODR_Addr,3)
 
 #define YSET0 BIT_ADDR(GPIOA_ODR_Addr,5)
 #define YSET1
@@ -87,14 +89,18 @@ typedef uint32_t  u32;
 typedef uint16_t u16;
 typedef uint8_t  u8;
 
+extern Config_InitStruct  Stepper_Config;
+extern uint8_t StepProcess;
+
 /*
 *********************************************************************************************************
-*                                       主函数调用
+*                                              函数调用
 *********************************************************************************************************
 */
 void bsp_Init(void);
 void USART_SendData(void const * argument, ...);
 void USART_SendString(void const * argument, ...);
 void bsp_Check(void);
+uint16_t Pos2PosData(uint8_t xpos,uint8_t ypos);
 
 #endif

@@ -34,6 +34,7 @@
 #include "stm32f1xx_hal.h"
 #include "cmsis_os.h"
 #include "crc.h"
+#include "dma.h"
 #include "spi.h"
 #include "tim.h"
 #include "usart.h"
@@ -81,12 +82,16 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_CRC_Init();
   MX_SPI2_Init();
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM5_Init();
   MX_USART1_UART_Init();
+  MX_TIM6_Init();
+  MX_TIM4_Init();
+  MX_TIM7_Init();
 
   /* USER CODE BEGIN 2 */
   bsp_Init();
@@ -95,17 +100,23 @@ int main(void)
 //		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
 //    HAL_Delay(500);
 //  }
-//	while(AT24CXX_Check())
-//	{
-//		HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
-//		HAL_Delay(1000);
-//	}
+//	printf("hello");
+////	while(AT24CXX_Check())
+////	{
+////		HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
+////		HAL_Delay(1000);
+////	}
 //  while(1)
 //  {
 //    HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
 //    HAL_Delay(200);
 //		HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
 //  }
+
+//	HAL_TIM_PWM_Start(&htim3,TIM_CHANNEL_2);
+//	HAL_TIM_PWM_Start(&htim2,TIM_CHANNEL_1);
+//	HAL_TIM_PWM_Start(&htim5,TIM_CHANNEL_2);
+//	while(1);
 	bsp_Check();
   /* USER CODE END 2 */
 

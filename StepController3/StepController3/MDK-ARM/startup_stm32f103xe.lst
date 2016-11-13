@@ -579,18 +579,18 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=stepcontroller3\startup_stm32f103xe.d -ostepcontroller3\startup_st
-m32f103xe.o -I..\Inc -I"F:\3-¿ÎÌâ »úÐµ±Û\PenDrawer\StepController3\StepControll
-er3\MDK-ARM\RTE" -I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
-" -I"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include" --p
-redefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 521" --predefi
+m32f103xe.o -I..\Inc -IC:\Users\biglion\Desktop\StepController3\StepController3
+\MDK-ARM\RTE -I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include" -I
+"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include" --prede
+fine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 521" --predefine="
 
 
 
 ARM Macro Assembler    Page 10 
 
 
-ne="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 1" --list=startup_stm32f103xe.
-lst startup_stm32f103xe.s
+_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 1" --list=startup_stm32f103xe.lst 
+startup_stm32f103xe.s
 
 
 

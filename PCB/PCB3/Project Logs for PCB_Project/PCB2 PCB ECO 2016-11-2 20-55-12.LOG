@@ -1,0 +1,10 @@
+Added Component: Designator=NRF(HDR2X4)
+Added Pin To Net: NetName=GND Pin=NRF-1
+Added Pin To Net: NetName=3V3 Pin=NRF-2
+Added Pin To Net: NetName=NRF_CE Pin=NRF-3
+Added Pin To Net: NetName=NRF_CSN Pin=NRF-4
+Added Pin To Net: NetName=NRF_SCK Pin=NRF-5
+Added Pin To Net: NetName=NRF_MOSI Pin=NRF-6
+Added Pin To Net: NetName=NRF_MISO Pin=NRF-7
+Added Pin To Net: NetName=NRF_IRQ Pin=NRF-8
+Added Member To Class: ClassName=Sheet2 Member=Component NRF Header 4X2

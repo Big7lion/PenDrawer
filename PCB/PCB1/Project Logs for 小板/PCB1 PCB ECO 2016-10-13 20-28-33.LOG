@@ -1,9 +1,0 @@
-Added Component: Designator=R1(R1/4)
-Added Component: Designator=R2(R1/4)
-Added Pin To Net: NetName=PB6 Pin=R1-1
-Added Pin To Net: NetName=3V3 Pin=R1-2
-Added Pin To Net: NetName=PB7 Pin=R2-1
-Added Pin To Net: NetName=3V3 Pin=R2-2
-Added Member To Class: ClassName=Sheet1 Member=Component R1 Res2
-Added Member To Class: ClassName=Sheet1 Member=Component R2 Res2
-Added Room: Name=Sheet1

@@ -23,6 +23,7 @@ stepcontroller3\freertos.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdarg
 stepcontroller3\freertos.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdio.h
 stepcontroller3\freertos.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdlib.h
 stepcontroller3\freertos.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\string.h
+stepcontroller3\freertos.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\math.h
 stepcontroller3\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 stepcontroller3\freertos.o: ../Inc/stm32f1xx_hal_conf.h
 stepcontroller3\freertos.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -54,6 +55,7 @@ stepcontroller3\freertos.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 stepcontroller3\freertos.o: ../Inc/crc.h
 stepcontroller3\freertos.o: ../Inc/spi.h
 stepcontroller3\freertos.o: ../Inc/tim.h
+stepcontroller3\freertos.o: ../Inc/dma.h
 stepcontroller3\freertos.o: ../Inc/usart.h
 stepcontroller3\freertos.o: ../Inc/gpio.h
 stepcontroller3\freertos.o: ../Inc/malloc.h

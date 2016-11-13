@@ -5,6 +5,7 @@ stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdarg.h
 stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdio.h
 stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdlib.h
 stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\string.h
+stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\math.h
 stepcontroller3\malloc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
 stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stddef.h
 stepcontroller3\malloc.o: F:\4-tools\Keil 5.21\ARM\ARMCC\Bin\..\include\stdint.h
@@ -53,6 +54,7 @@ stepcontroller3\malloc.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/eve
 stepcontroller3\malloc.o: ../Inc/crc.h
 stepcontroller3\malloc.o: ../Inc/spi.h
 stepcontroller3\malloc.o: ../Inc/tim.h
+stepcontroller3\malloc.o: ../Inc/dma.h
 stepcontroller3\malloc.o: ../Inc/usart.h
 stepcontroller3\malloc.o: ../Inc/gpio.h
 stepcontroller3\malloc.o: ../Inc/malloc.h

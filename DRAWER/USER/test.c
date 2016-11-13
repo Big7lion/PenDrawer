@@ -16,7 +16,8 @@
 ///////////////////////////////////////////////////////////////////////////////////*/
 //========================variable==========================//
 u16 ColorTab[5]={BRED,YELLOW,RED,GREEN,BLUE};//定义颜色数组
-u16 *PenData=NULL;
+u8 *PenDataX=NULL;
+u8 *PenDataY=NULL;
 //=====================end of variable======================//
 
 //******************************************************************
@@ -90,22 +91,6 @@ void Test_Circle(void)
 }
 
 
-//******************************************************************
-//函数名：  Chinese_Font_test
-//功能：    中文显示测试
-//输入参数：无
-//返回值：  无
-//******************************************************************
-void Chinese_Font_test(void)
-{	
-	DrawTestPage("测试5:中文显示测试");
-	Show_Str(10,30,BLUE,YELLOW,"16X16:全动电子技术有限公司欢迎您",16,0);
-	Show_Str(10,50,BLUE,YELLOW,"16X16:Welcome全动电子",16,1);
-	Show_Str(10,70,BLUE,YELLOW,"24X24:深圳市中文测试",24,1);
-	Show_Str(10,100,BLUE,YELLOW,"32X32:字体测试",32,1);
-	delay_ms(1200);
-}
-
 
 //******************************************************************
 //函数名：  Touch_Request
@@ -120,10 +105,13 @@ void Touch_Request(void)
 	u8 tmp = 0;					//内存申请标志位
 	u8 ltmp = 0;        //软件取点滤波计数
 	u8 rectmp;					//应答数据
+	u8 counter = 0;     //笔状态计时计数
+	u8 PenBit = 0;			//笔状态标志位
+	u8 m=0;
 	vu8 pointx[5],pointy[5];
 	u16 j=0;
-	u16 colorTemp=0;		//颜色切换计数
-	vu16 adjx=0,adjy=0;
+	u16 colorTemp=RED;		//颜色切换计数
+	vu16 adjx=0,adjy=0;  //坐标数据暂存缓冲
 	u32 i=1;					//屏幕画点计数
 	TP_Init();
 	KEY_Init();
@@ -133,16 +121,20 @@ void Touch_Request(void)
 	LCD_ShowString(lcddev.width-24,0,16,"RST",1);//显示清屏区域
 	LCD_Fill(lcddev.width-52,2,lcddev.width-50+20,18,RED); 
 	POINT_COLOR=RED;
+	
+	
+	LCD_ShowString(10,45,12,"memory",1);
+	LCD_ShowString(10,30,12,"point",1);
 		while(1)
 	{
-		LCD_ShowString(10,45,12,"memory",0);
-		LCD_ShowString(10,30,12,"point",0);
+
 	 	key=KEY_Scan();
 		tp_dev.scan(0); 	
 		if(tmp==0)	 
 		{
-			PenData = (u16*)mymalloc(SRAMIN,100*sizeof(u16));     //内存申请
-			PenData[0]=0x80;  //首位
+			PenDataX = (u8*)mymalloc(SRAMIN,100*sizeof(u8));     //内存申请
+			PenDataX[0]=0x80;  //首位
+			PenDataY[0]=0x80;
 			tmp=1;
 		}
 /*******************显示界面************************/
@@ -157,9 +149,16 @@ void Touch_Request(void)
 					POINT_COLOR=colorTemp;
 					LCD_Fill(lcddev.width-52,2,lcddev.width-50+20,18,POINT_COLOR); 
 //					memset(PenData,0,i+1);
-					myfree(SRAMIN,PenData);
+					myfree(SRAMIN,PenDataX);
+					myfree(SRAMIN,PenDataY);
+					rmtmp=1;	
+					ltmp=0; 
 					tmp=0;
+					counter = 0;
+					PenBit = 0;
 					i=1;
+					LCD_ShowString(10,45,12,"memory",1);
+					LCD_ShowString(10,30,12,"point",1);
 				}
 				else if((tp_dev.x>(lcddev.width-60)&&tp_dev.x<(lcddev.width-50+20))&&tp_dev.y<20)
 				{
@@ -173,19 +172,37 @@ void Touch_Request(void)
 /********************触屏数据******************/				
 				else
 				{
-						TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);		//画图
-						pointx[ltmp]=tp_dev.x;pointy[ltmp]=tp_dev.y;ltmp++;
-						if(ltmp==5)
+						TP_Draw_Big_Point(tp_dev.x-5,tp_dev.y-3,POINT_COLOR);				//画用户图
+						pointx[ltmp]=tp_dev.x>>1;pointy[ltmp]=tp_dev.y;
+						ltmp++;
+						if(ltmp==5)																							//滤值
 						{
-							PenData[i]=((pointx[3]-5)<<8)|(pointy[3]-3);															//存一个XY数据
-							ltmp=0;
-							i++;
-							if(i/100>=rmtmp)					/*简单的溢出数据判断*/		
+							if((pointx[2] - adjx >1)||(pointy[2] - adjy >1)||(adjx - pointx[2]>1)||(adjy - pointy[2]>1))
+							{
+								adjx = pointx[2],adjy = pointy[2],
+								TP_Draw_Big_Point((adjx>>1)-5,adjy-3,WHITE);				//画取样图
+								POINT_COLOR=colorTemp;
+								ltmp=0;
+								if(PenBit == 0)
 								{
-									PenData=(u16*)myrealloc(SRAMIN,PenData,(rmtmp+1)*100*sizeof(u16));
-									rmtmp++;
-									LCD_ShowNum(80,45,my_mem_perused(SRAMIN),3,12);     //显示内部SRAM使用量
-								}			
+									PenDataX[i]=0xff;																//写状态
+									PenDataY[i]=0x00;
+									i++;
+									counter = 0;																			//计时计数复位
+								}
+								PenDataX[i]=(adjx-5)>>1;																	//存一个XY数据
+								PenDataY[i]=adjy-3;	
+								i++;
+								
+								/*简单的溢出数据判断*/		
+								if(i/100>=rmtmp)																	
+									{
+										PenDataX=(u8*)myrealloc(SRAMIN,PenDataX,(rmtmp+1)*100*sizeof(u8));
+										PenDataY=(u8*)myrealloc(SRAMIN,PenDataY,(rmtmp+1)*100*sizeof(u8));
+										rmtmp++;
+										LCD_ShowNum(80,60,my_mem_perused(SRAMIN),3,12);     //显示内部SRAM使用量
+									}			
+							}
 						}
 				}
 			
@@ -193,13 +210,18 @@ void Touch_Request(void)
 		}
 		else
 		{
-			delay_ms(20);	//没有按键按下的时候 
+			delay_ms(10);	//没有按键按下的时候
+			counter++;
 			LCD_ShowNum(80,30,i,5,12);
-			if(i>10)
+			if(counter > 29 && (counter <= 300))
 			{
-					myfree(SRAMIN,PenData);
-					tmp=0;
-					i=1;
+				if(PenBit == 1)
+				{
+					PenDataX[i]=0x00;//提
+					PenDataX[i]=0xff;
+					i++;
+					PenBit = 0;
+				}
 			}
 		}
 		
@@ -208,29 +230,51 @@ void Touch_Request(void)
 		{
 
 			LCD_Clear(WHITE);//清屏
-		    TP_Adjust();  //屏幕校准 
+		  TP_Adjust();  //屏幕校准 
 			TP_Save_Adjdata();	 
 			DrawTestPage("Please Draw In Here");
+			myfree(SRAMIN,PenDataX);
+			myfree(SRAMIN,PenDataY);
 		}
 		else if(key==1)
-		{
+		{		
 			LCD_Fill(60,100,260,150,WHITE);
 			POINT_COLOR=RED;
 			LCD_ShowString(85,120,12,"START WIRELESS TRANSMIT!",1);
 			NRF24L01_TX_Mode();
 			NRF24L01_TxPacket(&rmtmp);
-			NRF24L01_TxPacket16(PenData);
 			delay_ms(20);
 			NRF24L01_RX_Mode();
-			while(NRF24L01_RxPacket(&rectmp));
+//			while(NRF24L01_RxPacket(&rectmp));
+			for(m=0;m<31;m++)
+			{
+				if(!NRF24L01_RxPacket(&rectmp))
+					break;
+				delay_ms(200);
+			}
 			LCD_Fill(60,100,260,150,WHITE);
 			if(rectmp==0x56)
 			{
 				LCD_ShowString(100,120,16,"TRANSMIT SUCCESS!",1);
+				/*********恢复初值**********/
+				myfree(SRAMIN,PenDataX);
+				myfree(SRAMIN,PenDataY);
+				rmtmp=1;	
+				ltmp=0; 
+				tmp=0;
+				counter = 0;
+				PenBit = 0;
+				i=1;
 				delay_ms(2000);
+				LCD_Clear(BLACK);
+				break;
 			}
 			else 
-				LCD_ShowString(70,1200,12,"NO lowerMCU ECHO! Please check!",1);
+			{
+				LCD_ShowString(70,120,12,"NO lowerMCU ECHO! Please check!",1);
+				delay_ms(500);
+//				LCD_Clear(BLACK);
+			}
 		}
 	}   
 }

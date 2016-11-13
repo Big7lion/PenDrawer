@@ -1,0 +1,20 @@
+Added Pin To Net: NetName=X_EN Pin=U1-50
+Added Pin To Net: NetName=XSET0 Pin=U1-54
+Added Pin To Net: NetName=XSET1 Pin=U1-56
+Added Pin To Net: NetName=STEPX Pin=U1-58
+Added Pin To Net: NetName=STEPZ Pin=U1-59
+Added Pin To Net: NetName=DIRX Pin=U1-60
+Added Pin To Net: NetName=Y_EN Pin=U1-62
+Added Pin To Net: NetName=YSET0 Pin=U1-64
+Added Pin To Net: NetName=STEPY Pin=U1-66
+Added Pin To Net: NetName=DIRY Pin=U1-68
+Added Pin To Net: NetName=DIRZ Pin=U1-70
+Added Pin To Net: NetName=ENDPOSX Pin=U1-78
+Added Net: Name=ENDPOSX
+Added Pin To Net: NetName=ENDPOSY Pin=U1-77
+Added Net: Name=ENDPOSY
+Added Pin To Net: NetName=STARTPOSX Pin=U1-76
+Added Net: Name=STARTPOSX
+Added Pin To Net: NetName=STARTPOSY Pin=U1-75
+Added Net: Name=STARTPOSY
+Added Room: Name=Sheet2

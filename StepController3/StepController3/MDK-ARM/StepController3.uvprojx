@@ -335,7 +335,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc;  ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;  ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;  ../Middlewares/Third_Party/FreeRTOS/Source/include;  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;  ../Drivers/CMSIS/Include;  ../Drivers/CMSIS/Device/ST/STM32F1xx/Include</IncludePath>
+              <IncludePath>../Inc;              ../Drivers/STM32F1xx_HAL_Driver/Inc;              ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy;              ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3;              ../Middlewares/Third_Party/FreeRTOS/Source/include;              ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;              ../Drivers/CMSIS/Include;              ../Drivers/CMSIS/Device/ST/STM32F1xx/Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -494,6 +494,11 @@
               <FileType>1</FileType>
               <FilePath>../Src/spi.c</FilePath>
             </File>
+            <File>
+              <FileName>dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/dma.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -608,6 +613,11 @@
               <FileName>bsp_stepper.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\bsp_stepper.c</FilePath>
+            </File>
+            <File>
+              <FileName>malloc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\malloc.c</FilePath>
             </File>
           </Files>
         </Group>

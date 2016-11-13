@@ -1,0 +1,5 @@
+Added Component: Designator=J1(TO-220)
+Added Pin To Net: NetName=12V Pin=J1-1
+Added Pin To Net: NetName=5V Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Member To Class: ClassName=Sheet2 Member=Component J1 7805

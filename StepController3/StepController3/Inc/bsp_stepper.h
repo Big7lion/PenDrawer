@@ -33,14 +33,18 @@ typedef struct
 }Config_InitStruct;
 
 
+#define SAVE_ADDR_BASE 40    //24C02地区基地址
+#define TIM2_ARR_Address    0x4000002C   //tim2  arr地址
+#define TIM3_ARR_Address    0x4000042C   //tim3  arr地址
 
 
 
 void Stepper_Save_pos(uint8_t xpos,uint8_t ypos);
-uint16_t Stepper_Read_pos(void);
+uint16_t Stepper_Read_eeprom_pos(void);
 uint8_t Subdivid_Contral(char pass,uint8_t num);
+void Stepper_Draw_Point(uint8_t xlen,uint8_t ylen);
+void Stepper_Pen_Press(void);
 
-
-
+												 
 
 #endif

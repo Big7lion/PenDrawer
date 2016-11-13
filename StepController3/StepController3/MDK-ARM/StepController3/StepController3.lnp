@@ -19,6 +19,7 @@
 "stepcontroller3\tim.o"
 "stepcontroller3\freertos.o"
 "stepcontroller3\spi.o"
+"stepcontroller3\dma.o"
 "stepcontroller3\stm32f1xx_hal_spi.o"
 "stepcontroller3\stm32f1xx_hal_uart.o"
 "stepcontroller3\stm32f1xx_hal_rcc_ex.o"
@@ -40,6 +41,7 @@
 "stepcontroller3\bsp_dwt.o"
 "stepcontroller3\bsp_nrf.o"
 "stepcontroller3\bsp_stepper.o"
+"stepcontroller3\malloc.o"
 --library_type=microlib --strict --scatter "StepController3\StepController3.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

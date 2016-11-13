@@ -1,5 +1,5 @@
 Dependencies for Project 'TOUCH', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5814AC61)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE\EXTI -I ..\HARDWARE\WDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\PWM -I ..\HARDWARE\LCD -I ..\HARDWARE\WKUP -I ..\HARDWARE\ADC -I ..\HARDWARE\TSensor -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\SPI -I ..\HARDWARE\FLASH -I ..\HARDWARE\TOUCH -I ..\HARDWARE\NRF24L01 -I ..\HARDWARE\SPI -I ..\HARDWARE\DMA -I ..\HARDWARE\MALLOC-I"F:\3-课题 机械臂\PenDrawer\DRAWER\USER\RTE"-I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5827A7FA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE\EXTI -I ..\HARDWARE\WDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\PWM -I ..\HARDWARE\LCD -I ..\HARDWARE\WKUP -I ..\HARDWARE\ADC -I ..\HARDWARE\TSensor -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\SPI -I ..\HARDWARE\FLASH -I ..\HARDWARE\TOUCH -I ..\HARDWARE\NRF24L01 -I ..\HARDWARE\SPI -I ..\HARDWARE\DMA -I ..\HARDWARE\MALLOC-I"F:\3-课题 机械臂\PenDrawer\DRAWER\USER\RTE"-I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\SYSTEM\delay\delay.h)(0x5331A5B4)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
 I (..\CORE\core_cm3.h)(0x4D523B58)
@@ -34,14 +34,14 @@ I (..\HARDWARE\LCD\lcd.h)(0x5331AFED)
 I (F:\4-tools\Keil 5.21\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (..\HARDWARE\TOUCH\touch.h)(0x5336CC10)
 I (gui.h)(0x530EBB08)
-I (test.h)(0x530EBB08)
+I (test.h)(0x5827BCB0)
 I (..\HARDWARE\SPI\spi.h)(0x50559286)
 I (..\HARDWARE\NRF24L01\24l01.h)(0x580B907C)
 I (..\HARDWARE\DMA\dma.h)(0x50553E6C)
 I (..\HARDWARE\MALLOC\malloc.h)(0x5502E8A8)
 I (..\HARDWARE\24CXX\24cxx.h)(0x53C507F8)
 I (..\HARDWARE\IIC\myiic.h)(0x58008AF6)
-F (.\test.c)(0x5814ACC6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE\EXTI -I ..\HARDWARE\WDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\PWM -I ..\HARDWARE\LCD -I ..\HARDWARE\WKUP -I ..\HARDWARE\ADC -I ..\HARDWARE\TSensor -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\SPI -I ..\HARDWARE\FLASH -I ..\HARDWARE\TOUCH -I ..\HARDWARE\NRF24L01 -I ..\HARDWARE\SPI -I ..\HARDWARE\DMA -I ..\HARDWARE\MALLOC-I"F:\3-课题 机械臂\PenDrawer\DRAWER\USER\RTE"-I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
+F (.\test.c)(0x5827C0DF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I ..\HARDWARE\LED -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\STM32F10x_FWLib\inc -I ..\CORE -I ..\HARDWARE\KEY -I ..\HARDWARE\EXTI -I ..\HARDWARE\WDG -I ..\HARDWARE\TIMER -I ..\HARDWARE\PWM -I ..\HARDWARE\LCD -I ..\HARDWARE\WKUP -I ..\HARDWARE\ADC -I ..\HARDWARE\TSensor -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\HARDWARE\SPI -I ..\HARDWARE\FLASH -I ..\HARDWARE\TOUCH -I ..\HARDWARE\NRF24L01 -I ..\HARDWARE\SPI -I ..\HARDWARE\DMA -I ..\HARDWARE\MALLOC-I"F:\3-课题 机械臂\PenDrawer\DRAWER\USER\RTE"-I"F:\4-tools\Keil 5.21\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I"F:\4-tools\Keil 5.21\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include"-D__UVISION_VERSION="521" -D_RTE_ -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\obj\test.o --omf_browse ..\obj\test.crf --depend ..\obj\test.d)
 I (..\HARDWARE\LCD\lcd.h)(0x5331AFED)
 I (..\SYSTEM\sys\sys.h)(0x5331A53F)
 I (..\USER\stm32f10x.h)(0x4D783CB4)
@@ -75,7 +75,7 @@ I (..\STM32F10x_FWLib\inc\misc.h)(0x4D783BB4)
 I (F:\4-tools\Keil 5.21\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (..\SYSTEM\delay\delay.h)(0x5331A5B4)
 I (gui.h)(0x530EBB08)
-I (test.h)(0x530EBB08)
+I (test.h)(0x5827BCB0)
 I (..\HARDWARE\TOUCH\touch.h)(0x5336CC10)
 I (..\HARDWARE\KEY\key.h)(0x53C507F7)
 I (..\HARDWARE\LED\led.h)(0x4F54E6C6)

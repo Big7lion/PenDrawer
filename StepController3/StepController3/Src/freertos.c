@@ -45,11 +45,19 @@ osThreadId Task01Handle;
 osThreadId Task02Handle;
 
 /* USER CODE BEGIN Variables */
-uint8_t Messagesign = 0;                      //消息队列标志
-uint8_t sendtmp = 0x56;                    //发送成功标志
-uint16_t *PenData = NULL;
-uint8_t DataLength;                       //接收数组长度
 static SemaphoreHandle_t  xMutex = NULL;
+uint8_t Messagesign = 0;                  //消息队列标志
+uint8_t StepProcess = 1;									//绘画控制标志
+uint8_t sendtmp = 0x56;                   //发送成功标志
+uint8_t DataLength;                       //接收数组长度
+uint8_t xPostmp;                          //8位位置数据
+uint8_t yPostmp;                          //8位位置数据
+uint16_t Postmp;                          //16位位置数据
+
+uint8_t *PenDataX = NULL;
+uint8_t *PenDataY = NULL;
+
+
 /* USER CODE END Variables */
 
 /* Function prototypes -------------------------------------------------------*/
@@ -110,29 +118,34 @@ void NRFTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-/*		RX_Mode();
+		RX_Mode();
 		if(NRF24L01_RxPacket(&DataLength)== 0)
 		{
 			AppObjCreate();              //创建互斥信号量
-			PenData=(u16*)myrealloc(SRAMIN,PenData,(uint8_t)DataLength*100*sizeof(u16));
+			PenDataX=(uint8_t *)mymalloc(SRAMIN,((uint8_t)DataLength)*100*sizeof(uint8_t));
+			PenDataY=(uint8_t *)mymalloc(SRAMIN,((uint8_t)DataLength)*100*sizeof(uint8_t));
 			HAL_Delay(20);
-			if(NRF24L01_RxPacket(PenData) == 0)
+			if(NRF24L01_RxPacket(PenDataX) == 0)
       {
-        if(PenData[0] == 0x80)
-        {
-          TX_Mode();
-          NRF24L01_TxPacket(&sendtmp);
-          Messagesign = 1;
-        }
-        else
-        {
-          USART_SendString("DATA Receive error!");
-          Messagesign = 0;
-        }
-      }	
-
+				RX_Mode();
+				if(NRF24L01_RxPacket(PenDataY) == 0)
+				{
+					if(PenDataX[0] == 0x80&&PenDataY[0] == 0x80)
+					{
+						TX_Mode();
+						NRF24L01_TxPacket(&sendtmp);
+						Messagesign = 1;
+					}
+					else
+					{
+						USART_SendData("Data Received error!");
+						Messagesign = 0;
+					}
+				}
+				else USART_SendData("Data haven't received compeletly!");
+      }
 			xSemaphoreGive(xMutex);      //释放信号量
-		}           */
+		}           
     osDelay(5);
   }
   /* USER CODE END NRFTask */
@@ -147,15 +160,71 @@ void StepperTask02(void const * argument)
   {
 		if(Messagesign == 1)
     {
+      AppObjCreate();              //创建互斥信号量
+			USART_SendData("Start Drawing!");
+      Postmp = Stepper_Read_eeprom_pos();
+      if(Postmp != 0)
+      {
+        xPostmp = Postmp&0xff;     //读当前位置值
+        yPostmp = Postmp>>8;
+      }
 			
+			X_enable();                  //电机驱动使能
+			Y_enable();
+			
+			volatile uint8_t xTargetPos,yTargetPos,xbit,ybit,zstatus=0,i=1;
+	//循环计数（check）		
+			for(uint8_t step = 1;(step<=DataLength*100*sizeof(uint8_t));step++)
+      {
+				if(PenDataX[step]==0xff&&PenDataY[step]==0x00)                    //Z轴状态控制
+				{																							//写
+					Z_Bdir();
+					Stepper_Pen_Press();
+					step++;
+				}
+				else if(PenDataX[step]==0x00&&PenDataX[step]==0xff)								//提
+				{
+					Z_Fdir();
+					Stepper_Pen_Press();
+					step++;
+				}
+				
+				else if(PenDataX[step]!=0&&PenDataX[step]!=0)																			//轨迹运算
+				{
+						xTargetPos = PenDataX[step]; 
+						yTargetPos = PenDataY[step];
+						if(xTargetPos > xPostmp)
+							{X_Fdir();xbit = xTargetPos - xPostmp;}
+						else if(xTargetPos < xPostmp)
+							{X_Bdir();xbit = xPostmp - xTargetPos;}
+						if(yTargetPos > yPostmp)
+							{Y_Fdir();ybit = yTargetPos - yPostmp;}
+						else if(yTargetPos < yPostmp)
+							{Y_Bdir();ybit = yPostmp - yTargetPos;}	
+							
+						Stepper_Draw_Point(xbit,ybit);     //电机运动控制
+						xPostmp = xTargetPos;
+						yPostmp = yTargetPos;
+						while(StepProcess);
+						if(i/5 == 1)
+						{
+							Stepper_Save_pos(xPostmp,yPostmp);
+							i = 0;
+						}
+						else	i++;
+				}
+      }
+			X_disable();                 //电机失能
+      Y_disable();
+			myfree(SRAMIN,PenDataX);
+			myfree(SRAMIN,PenDataY);
+			xSemaphoreGive(xMutex);      //释放信号量
     }
-    osDelay(1);
+    Messagesign = 0;
+    osDelay(5);
   }
   /* USER CODE END StepperTask02 */
 }
-
-
-
 
 /* USER CODE BEGIN Application */
 void AppObjCreate (void)
